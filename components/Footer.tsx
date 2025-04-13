@@ -1,11 +1,13 @@
+import { InputEmailCopyFooter } from "../components/initial/InputEmailCopy" 
+
 export default function Footer() {
   return (
-    <header className="flex items-center justify-between p-4 bg-gray-800 text-white">
-      <h1 className="text-2xl font-bold">Chat Application</h1>
-      <nav className="space-x-4">
-        <a href="/about" className="hover:text-gray-400">About</a>
-        <a href="/contact" className="hover:text-gray-400">Contact</a>
-      </nav>
-    </header>
+    <footer className="container mx-auto pt-12">
+      <InputEmailCopyFooter />
+      <div className="flex justify-center gap-4 border-t-1 p-8 border-gray-200" >
+        <a href="#" className="border-1 border-blue-600 text-blue-600 rounded-full px-2 ">GitHub</a>
+        <a href="#" className="border-1 border-blue-600 text-blue-600 rounded-full px-2 ">Linkedin</a>
+      </div>
+    </footer>
   )
 }

@@ -1,7 +1,7 @@
 'use server'
 import { NextApiRequest, NextApiResponse } from 'next';
 
-import ChatFetch from "../../../components/ChatFetch"
+import ChatFetch from "../../../components/chat/ChatFetch"
 
 export async function handleSubmit(message: string) {
 

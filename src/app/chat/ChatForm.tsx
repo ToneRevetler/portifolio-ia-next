@@ -32,13 +32,13 @@ export default function ChatForm() {
 
   return (<>
 
-    <div className="flex flex-col gap-4 items-end p-4">
+    <div className="h-full border-r-1 border-l-1 border-gray-200 flex flex-col justify-end gap-4 items-end p-4">
       {messages.map((msg, index) => (
         <div key={index}
           className={`flex w-full mb-2 ${msg.from === 'user' ? 'justify-end' : 'justify-start'}`}
         >
           <div
-            className={`flex rounded-lg px-4 py-2 text-white ${msg.from === 'user' ? 'bg-blue-500' : 'bg-gray-700'}`}
+            className={`flex px-4 py-2 rounded-lg  text-white ${msg.from === 'user' ? 'bg-blue-500 rounded-br-none' : 'bg-gray-700 rounded-bl-none'}`}
           >
             <p>{msg.text}</p>
           </div>
@@ -46,16 +46,16 @@ export default function ChatForm() {
       ))}
     </div>
 
-    <form onSubmit={handleSendMessage} className="flex justify-center rounded-b-2xl items-center gap-4 p-4 bg-gray-400">
+    <form onSubmit={handleSendMessage} className="border-1 border-gray-200  flex justify-between rounded-b-2xl items-center gap-2 p-4">
       <input id="inputChat" type="text"
-        placeholder="me pergunte!"
-        className="bg-white p-2 rounded-lg"
+        placeholder="Me Pergunte!"
+        className="bg-white p-2 rounded-lg grow border-1 border-gray-200 focus:outline-none focus:border-blue-500"
         onChange={(e) => setInputValue(e.target.value)} />
 
       <button
-        className="bg-green-600 text-white p-2 rounded-lg "
+        className="bg-blue-700 text-white p-2 rounded-full "
         type="submit">
-        <IoIosSend size={24} color="#fff" />
+        <IoIosSend className="text-white text-xl" />
       </button>
 
     </form>

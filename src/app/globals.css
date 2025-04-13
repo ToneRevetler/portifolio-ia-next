@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -18,9 +19,16 @@
     --foreground: #ededed;
   }
 }
-*{
-  font-family: "Inter", sans-serif;
-}
+
 .default-black{
   color: #261f4d;
+}
+.gradient-stroke {
+  background: linear-gradient(90deg, #00aed5 0%, #2130cf 100%);
+  color: white;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-stroke: 0.07em transparent;
+  padding-right: 4px;
+  line-height: 1;
 }
