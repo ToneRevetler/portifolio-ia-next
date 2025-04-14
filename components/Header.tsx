@@ -36,11 +36,12 @@ export default function Header() {
           </li>
         </ul>
         <div className="hidden md:flex md:justify-end">
-          <button
-            className="flex text-base w-fit cursor items-center justify-end rounded-md gap-4 px-6 py-2 text-white bg-blue-500">
+          <a
+            href="#"
+            className="flex  text-base w-fit  items-center justify-end rounded-md gap-4 px-6 py-2 text-white bg-blue-500">
             Vamos Conversar
             <FaWhatsapp className="text-2xl text-white" />
-          </button>
+          </a>
         </div>
       </div>
     </nav>

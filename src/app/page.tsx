@@ -1,9 +1,12 @@
 import Initial from "../../components/Hero"
+import ProjectSection from "../../components/ProjectSection"
+import AboutMe from "../../components/AboutMe"
 
 export default function Home() {
-  return (
-    <div className="flex justify-center flex-col gap-4 items-center ">
-      < Initial />
-    </div>
+  return (<>
+    <Initial />
+    < ProjectSection />
+    <AboutMe />
+  </>
   );
 }
