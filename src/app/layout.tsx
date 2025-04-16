@@ -12,7 +12,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={mainFont.className}>
+      <body className={mainFont.className} >
         <Header />
         {children}
         <Footer />
