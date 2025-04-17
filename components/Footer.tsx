@@ -6,8 +6,8 @@ export default function Footer() {
       <div className="container mx-auto">
       <InputEmailCopyFooter />
       <div className="flex justify-center gap-4 border-t-1 p-8 border-gray-400" >
-        <a href="#" className="border-1 border-blue-600 text-blue-600 rounded-full px-2 ">GitHub</a>
-        <a href="#" className="border-1 border-blue-600 text-blue-600 rounded-full px-2 ">Linkedin</a>
+        <a href="#" className="border-1 border-blue-600 text-blue-600 rounded-full px-4 hover:bg-blue-600 hover:text-white transition duration-300 ease-in-out">GitHub</a>
+        <a href="#" className="border-1 border-blue-600 text-blue-600 rounded-full px-4 hover:bg-blue-600 hover:text-white transition duration-300 ease-in-out">Linkedin</a>
       </div>
       </div>
     </footer>
