@@ -53,7 +53,7 @@ export default function ChatForm() {
         onChange={(e) => setInputValue(e.target.value)} />
 
       <button
-        className="bg-blue-700 text-white p-2 rounded-full "
+        className="cursor-pointer bg-blue-700 text-white p-2 rounded-full hover:bg-blue-500 transition duration-200 ease-in-out"
         type="submit">
         <IoIosSend className="text-white text-xl" />
       </button>

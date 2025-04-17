@@ -34,7 +34,7 @@ export default function InputEmailCopy() {
       <div className="px-4 rounded-r-md border-gray-400 border-1 border-l-0 min-h-full flex items-center">
         <p className="text-gray-900" id="emailInput">mirandatone@outlook.com</p>
       </div>
-      <div onClick={handleCopy} className="w-full bg-gray-100 opacity-0 h-full absolute rounded-r-md hover:opacity-95 transition duration-300 ease-in-out">
+      <div onClick={handleCopy} className="w-full bg-gray-100 opacity-0 h-full absolute rounded-r-md border-gray-400 border-1  hover:opacity-95 transition duration-300 ease-in-out">
         <div className="w-full h-full flex items-center justify-center">
           <p id="hoverTextEmail" className="text-gray-900">Copiar!</p>
         </div>

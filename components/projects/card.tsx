@@ -22,7 +22,7 @@ export default function ProjectCard({ title, description, imageUrl, link }: Proj
         </div>
         <div className='pt-8'>
           <a href={link} target="_blank" rel="noopener noreferrer"
-            className=" inline-block rounded-md w-fit font-semibold px-6 py-2 text-white bg-blue-500">
+            className=" inline-block rounded-md w-fit font-semibold px-6 py-2 text-white bg-blue-500 hover:bg-blue-700 transition duration-200 ease-in-out">
             Ver projeto
           </a>
         </div>

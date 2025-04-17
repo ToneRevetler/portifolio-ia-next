@@ -11,7 +11,7 @@ export default function InitialContent() {
     <div className="flex flex-col justify-center h-full">
       <div>
         <h2 className="text-gray-500 text-xl pb-2 font-semibold">Olá, eu sou</h2>
-        <h1 className={`${titleFont.className} pb-4 font-bold md:text-6xl text-4xl tracking-wider`}>
+        <h1 className={`${titleFont.className} pb-4 font-bold md:text-6xl text-5xl tracking-wider`}>
           <span className=" pr-2  bg-gradient-to-r from-[#00aed5] to-[#2130cf] bg-clip-text text-transparent">            Tone
           </span>
           <span className="gradient-stroke">Revetler</span>
