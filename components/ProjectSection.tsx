@@ -7,7 +7,7 @@ const imgTest = "/images/project/exemplo-projeto.png"
 
 export default function ProjectSection() {
   return <>
-    <div className="bg-gray-50 py-12 p-4">
+    <section id="project" className="bg-gray-50 py-12 p-4 scroll-smooth">
       <div className="text-center">
         <h3 className="uppercase text-blue-600 font-semibold">O que eu já fiz?</h3>
         <h2 className={`${titleFont.className} text-gray-800 pt-2 pb-4 font-bold md:text-5xl tracking-wider`}>Meus Projetos</h2>
@@ -39,6 +39,6 @@ export default function ProjectSection() {
           link="#"
         />
       </div>
-    </div>
+    </section>
   </>
 }

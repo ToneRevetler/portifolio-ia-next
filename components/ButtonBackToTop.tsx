@@ -26,7 +26,7 @@ export default function ButtonBackToTop() {
     <div id="backToTopBtn" className="fixed bottom-4 right-4 z-50 none" style={{ display: 'none' }}>
       <button
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-        className="bg-blue-500 text-white rounded-full p-3 shadow-lg hover:bg-blue-600 transition duration-300"
+        className="cursor-pointer bg-blue-500 text-white rounded-full p-3 shadow-lg hover:bg-blue-600 transition duration-300"
       >
         ↑
       </button>

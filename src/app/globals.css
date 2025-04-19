@@ -20,6 +20,10 @@
   }
 }
 
+*{
+  scroll-behavior: smooth;
+}
+
 .default-black{
   color: #261f4d;
 }

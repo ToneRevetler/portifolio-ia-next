@@ -1,8 +1,8 @@
 'use client'
 
 import { useState } from "react";
-import { FaWhatsapp } from "react-icons/fa"
 import { FaBars, FaTimes } from "react-icons/fa";
+import WhatsAppButton from "./social/WhatsAppButton"
 
 export default function Header() {
 
@@ -25,24 +25,20 @@ export default function Header() {
             }  md:flex text-xl md:text-lg shadow-lg md:gap-4 md:shadow-none text-blue-800 px-4 py-8 md:py-4 items-center justify-center font-semibold absolute md:static top-16 left-0 w-full bg-white md:bg-transparent md:w-auto`}
         >
           <li className="py-4 md:py-0 ">
-            <a href="/contact" className="hover:text-gray-500" >Projetos</a>
+            <a href="#project" className="hover:text-gray-500 scroll-smooth" >Projetos</a>
           </li>
+
           <hr className="border-gray-300 " />
           <li className="py-4 md:py-0 ">
-            <a href="/contact" className="hover:text-gray-500" >Experiencia</a>
+            <a href="#aboutMe" className="hover:text-gray-500" >Sobre mim</a>
           </li>
-          <hr className="border-gray-300 " />
-          <li className="py-4 md:py-0 ">
-            <a href="/contact" className="hover:text-gray-500" >Sobre mim</a>
-          </li>
+          <div className="md:hidden">
+            < WhatsAppButton />
+          </div>
+
         </ul>
         <div className="hidden md:flex md:items-center md:justify-end ">
-          <a
-            href="#"
-            className="flex  text-base w-fit h-fit  items-center justify-end rounded-md gap-4 px-6 py-4 text-white bg-blue-500">
-            Vamos Conversar
-            <FaWhatsapp className="text-2xl text-white" />
-          </a>
+          < WhatsAppButton />
         </div>
       </div>
     </nav>
