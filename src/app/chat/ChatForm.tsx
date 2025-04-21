@@ -31,8 +31,7 @@ export default function ChatForm() {
   }
 
   return (<>
-
-    <div className="h-full border-r-1 border-l-1 border-gray-200 flex flex-col justify-end gap-4 items-end p-4">
+    <div className=" min-h-0 flex-1 border-r-1 border-l-1 border-gray-200 flex flex-col  gap-4 items-end p-4 overflow-y-auto">
       {messages.map((msg, index) => (
         <div key={index}
           className={`flex w-full mb-2 ${msg.from === 'user' ? 'justify-end' : 'justify-start'}`}
