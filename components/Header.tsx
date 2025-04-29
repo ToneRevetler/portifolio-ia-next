@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import Image from "next/image";
 import WhatsAppButton from "./social/WhatsAppButton"
 
 export default function Header() {
@@ -13,7 +14,9 @@ export default function Header() {
   return (
     <nav className="border-b-1 border-gray-200">
       <div className="container mx-auto py-4 grid grid-cols-2 px-4 md:px-0 md:grid-cols-3">
-        <h1 className="text-5xl font-bold text-blue-500">TR</h1>
+        <h1>
+          <Image src="/images/project/Logo.png" alt="Logo" width={80} height={80} className="w-18 h-14 md:h-18 md:w-24" />
+        </h1>
         <button
           className="md:hidden flex items-center justify-end text-blue-500"
           onClick={handleNavBarToggle}

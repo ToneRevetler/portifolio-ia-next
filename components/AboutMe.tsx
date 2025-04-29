@@ -11,7 +11,10 @@ export default function AboutMe() {
       <div className="grid px-4 md:px-0 gap-8 md:pb-8 md:flex ">
         <div className="md:w-2/3">
           <h3 className="font-semibold text-blue-700 text-xl pb-4">Quem sou eu?</h3>
-          <p>Eu sou o Tone e atualmente moro em Indaiatuba. Trabalho como Designer Gráfico em uma empresa há mais de 1 ano e por conta própria há mais de 3. Agora estou direcionando minha carreira para o mundo da programação. Me apaixonei pela programação há quase 1 ano e desde então estou cursando Engenharia de Software e estudando diversas tecnologias, como JavaScript, HTML, CSS, WordPress. Você pode me encontrar no GitHub ou no LinkedIn. Atualmente, estou expandindo minhas habilidades com UX design e Bootstrap</p>
+          <p className="pb-2">Olá! Eu sou o Tone, desenvolvedor Front-end e atualmente moro em Indaiatuba.</p>
+          <p className="">Trabalho com <strong> HTML, CSS, JavaScript</strong> e <strong>Liquid</strong> no dia a dia, criando experiências para e-commerces e sites.</p>
+          <p className="">Além disso, estou expandindo minhas habilidades estudando <strong> Next.js, Tailwind</strong> e <strong> integração com APIs de Inteligência Artificial.</strong> Também venho mergulhando no universo do back-end com <strong> Node.js</strong> e testes automatizados com <strong> Jest.</strong></p>
+          <p className="pb-6">Estou sempre em busca de novos desafios para evoluir como desenvolvedor. Você pode me encontrar no GitHub ou no LinkedIn. Vamos conversar?</p>
           < SocialMedia />
         </div>
         <div>
