@@ -8,8 +8,8 @@ export default function AboutMe() {
   return <>
     <section id="aboutMe" className="container mx-auto">
       <h2 className={`${titleFont.className} text-center my-8 md:my-16 text-gray-800 font-bold md:text-5xl text-3xl tracking-wider`}>Sobre mim</h2>
-      <div className="grid px-4 md:px-0 gap-8 md:pb-8 md:flex ">
-        <div className="md:w-2/3">
+      <div className="grid px-4 md:px-0 gap-8 md:pb-8 md:flex md:justify-center">
+        <div className="md:w-1/2">
           <h3 className="font-semibold text-blue-700 text-xl pb-4">Quem sou eu?</h3>
           <p className="pb-2">Olá! Eu sou o Tone, desenvolvedor Front-end e atualmente moro em Indaiatuba.</p>
           <p className="">Trabalho com <strong> HTML, CSS, JavaScript</strong> e <strong>Liquid</strong> no dia a dia, criando experiências para e-commerces e sites.</p>
