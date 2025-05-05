@@ -27,19 +27,19 @@ export default function ProjectSection() {
           title="Ocean Pools"
           description="Freelance criado para uma empreasa de piscinas já existente. Uma landing page com contato para gerar leads. Feito com WordPress e alguns plugins."
           imageUrl={imgOceanPools}
-          link="#"
+          link="https://oceanpoolsfl.com/"
         />
         <ProjectCard
           title="Sofá Na Caixa"
           description="Grande e-commerce onde atuo como funcionário. Utilizando Liquid, HTML, CSS e JavaScript desenvolvendo um tema praticamente novo. Esse e-commerce atua no mercado brasileiro."
           imageUrl={SofaNaCaixa}
-          link="#"
+          link="https://sofanacaixa.com.br/"
         />
         <ProjectCard
           title="Eco Flame Garden"
           description="E-commerce de produtos para área externa atuo com funcionário. Utilizando Liquid, HTML, CSS e JavaScript. Esse e-commerce é completamente personalizado e único."
           imageUrl={imgEcoFlame}
-          link="#"
+          link="https://www.ecoflamegarden.com.br/"
         />
       </div>
     </section>
