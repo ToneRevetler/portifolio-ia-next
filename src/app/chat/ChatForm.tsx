@@ -40,11 +40,19 @@ export default function ChatForm() {
     }
 
     setInputValue('');
+    scrollToBottom()
+  }
+
+  function scrollToBottom() {
+    const chatContent = document.getElementById('chatContent');
+    if (chatContent) {
+      chatContent.scrollTop = chatContent.scrollHeight;
+    }
   }
 
   return (
     <>
-      <div className="min-h-0 flex-1 border-r-1 border-l-1 border-gray-200 flex flex-col gap-4 items-end p-4 overflow-y-auto">
+      <div id="chatContent" className="min-h-0 flex-1 border-r-1 border-l-1 border-gray-200 flex flex-col gap-4 items-end p-4 overflow-y-auto">
         {messages.map((msg, index) => (
           <div
             key={index}
@@ -52,8 +60,8 @@ export default function ChatForm() {
           >
             <div
               className={` px-4 py-2 rounded-lg text-white ${msg.from === 'user'
-                  ? 'bg-blue-500 rounded-br-none'
-                  : 'bg-gray-700 rounded-bl-none'
+                ? 'bg-blue-500 rounded-br-none'
+                : 'bg-gray-700 rounded-bl-none'
                 }`}
             >
               {msg.from === 'bot' ? (
