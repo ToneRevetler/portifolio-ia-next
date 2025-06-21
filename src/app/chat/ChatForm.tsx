@@ -5,6 +5,11 @@ import { handleSubmit } from './actions';
 import { useState } from "react";
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import React from 'react';
+import Lottie from 'lottie-react';
+import animationData from '../../assets/lottie/dots loading edit.json';
+
+
 
 export default function ChatForm() {
   const [messages, setMessages] = useState<{
@@ -78,7 +83,14 @@ export default function ChatForm() {
         {isLoading && (
           <div className="flex w-full mb-2 justify-start">
             <div className=" px-4 py-2 rounded-lg text-white bg-gray-700 rounded-bl-none animate-pulse">
-              <p>Carregando...</p>
+              <div>
+                <Lottie
+                  animationData={animationData}
+                  loop
+                  autoplay
+                  style={{ width: 30, height: 30 }}
+                />
+              </div>
             </div>
           </div>
         )}
@@ -100,6 +112,7 @@ export default function ChatForm() {
           type="submit"
           disabled={isLoading}
         >
+
           <IoIosSend className="text-white text-xl" />
         </button>
       </form>

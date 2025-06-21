@@ -5,6 +5,7 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import Image from "next/image";
 import WhatsAppButton from "./social/WhatsAppButton"
 
+
 export default function Header() {
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,8 +16,9 @@ export default function Header() {
     <nav className="border-b-1 border-gray-200">
       <div className="container mx-auto py-4 grid grid-cols-2 px-4 md:px-0 md:grid-cols-3">
         <h1>
-          <Image src="/images/project/Logo.png" alt="Logo" width={80} height={80} className="w-18 h-14 md:h-18 md:w-24" />
+          <Image src="/images/project/Logo.png" alt="Logo" width={80} height={80} className="w-18 h-14 md:h-12 md:w-16" />
         </h1>
+      
         <button
           className="md:hidden flex items-center justify-end text-blue-500"
           onClick={handleNavBarToggle}
@@ -25,7 +27,7 @@ export default function Header() {
         </button>
         <ul
           className={`${isMenuOpen ? "block" : "hidden"
-            }  md:flex text-xl md:text-lg shadow-lg md:gap-4 md:shadow-none text-blue-800 px-4 py-8 md:py-4 items-center justify-center font-semibold absolute md:static top-16 left-0 w-full bg-white md:bg-transparent md:w-auto`}
+            }  md:flex text-xl md:text-lg shadow-lg md:gap-4 md:shadow-none text-blue-800 px-4 py-8 md:py-0 items-center justify-center font-semibold absolute md:static top-16 left-0 w-full bg-white md:bg-transparent md:w-auto`}
         >
           <li className="py-4 md:py-0 ">
             <a href="#project" className="hover:text-gray-500 scroll-smooth" >Projetos</a>
