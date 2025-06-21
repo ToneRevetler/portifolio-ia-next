@@ -70,9 +70,9 @@ export default function InputEmailCopy() {
 
 export function InputEmailCopyFooter() {
   return <>
-    <div className="flex items-center flex-col pb-8">
+    <div className="flex items-center flex-col md:pb-8">
       <p className=" font-semibold text-gray-600 pb-2">Me envie um email!</p>
-      <h2 className="font-bold text-gray-900 text-xl md:text-2xl">mirandatone@outlook.com</h2>
+      <h2 className="font-bold text-gray-900 text-xl ">mirandatone@outlook.com</h2>
     </div>
   </>
 }
