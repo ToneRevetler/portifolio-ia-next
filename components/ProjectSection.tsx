@@ -1,5 +1,6 @@
 import { Lexend } from "next/font/google";
 import ProjectCard from "./projects/card";
+import GradientText from "../src/assets/gps-lib/GradientText";
 
 const titleFont = Lexend({ subsets: ["latin"], weight: "700" });
 
@@ -11,12 +12,18 @@ const SofaNaCaixa = "/images/project/SofaNaCaixalMockup.png"
 export default function ProjectSection() {
   return <>
     <section id="project" className="bg-gray-50 py-12 p-4 scroll-smooth">
-      <div className="text-center">
-        <h3 className="uppercase text-blue-600 font-semibold">O que eu já fiz?</h3>
-        <h2 className={`${titleFont.className} text-gray-800 pt-2 pb-4 font-bold md:text-5xl tracking-wider`}>Meus Projetos</h2>
-        <p className="text-gray-600">Conheça alguns projetos que eu atuei.</p>
+      <div className="container mx-auto">
+        <GradientText
+          colors={["#2130cf", "#535dca ", "#c7ccff", "#535dca ", "#2130cf"]}
+          animationSpeed={6}
+          showBorder={false}
+          className="custom-class text-xl"
+        >
+          O QUE EU JÁ FIZ?
+        </GradientText>
+        <h2 className={`${titleFont.className} text-gray-800 pt-2  font-bold md:text-5xl tracking-wider`}>Meus Projetos</h2>
       </div>
-      <div className="container mx-auto grid grid-cols-1 grid-rows-2 md:grid-cols-2 gap-8 mt-8 md:mt-16">
+      <div className="container mx-auto grid grid-cols-1 grid-rows-2 md:grid-cols-2 gap-8 mt-8 md:mt-12">
         <ProjectCard
           title="Casa Sol outdoor"
           description="Projeto Freelance criado dentro de uma loja shopify, componentes personalizados em Liquid. Esse e-commerce atua no mercado dos Estados Unidos."

@@ -8,7 +8,7 @@ import { RiTailwindCssFill } from "react-icons/ri";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-200 mt-12 pt-12">
+    <footer className="bg-gray-200  pt-12">
       <div className="container mx-auto">
         <div className="grid md:grid-cols-2 items-center justify-items-center pb-8 gap-8 md:gap-2">
           <div className="grid gap-2 text-sm text-gray-800 antialiased md:justify-items-start md:w-full">
