@@ -4,7 +4,7 @@ import { Lexend } from "next/font/google";
 import InputEmailCopy from "./InputEmailCopy"
 import SocialMedia from "../social/SocialMedia";
 import Lottie from "lottie-react";
-import animationData from "../../src/assets/lottie/hand hello.json";
+import animationData from "../../src/assets/lottie/handHello.json";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 
@@ -31,7 +31,7 @@ function HandAnimation() {
       style={{ width: 40, height: 40 }}
     />
   ) : (
-    <img src="/images/icon/hand-fallback.png" alt="Olá" width={40} height={40} className="bg-cover" />
+    <Image src="/images/icon/hand-fallback.png" alt="Olá" width={40} height={40} className="bg-cover" />
   );
 }
 

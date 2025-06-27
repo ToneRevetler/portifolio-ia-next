@@ -20,7 +20,7 @@ export default function Footer() {
         </div>
         <div className="flex justify-center border-t-1 p-4 gap-1 border-gray-400 text-gray-800" >
           <p className="text-center">
-            Copyright © 2025 <span><a className="underline" href="https://github.com/ToneRevetler">Tone Revetler.</a></span>All rights reserved
+            Copyright © 2025 <span><a className="underline" href="https://github.com/ToneRevetler">Tone Revetler.</a></span> All rights reserved
           </p>
         </div>
       </div>

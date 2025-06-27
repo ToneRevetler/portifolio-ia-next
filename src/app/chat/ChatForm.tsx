@@ -7,7 +7,7 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import React from 'react';
 import Lottie from 'lottie-react';
-import animationData from '../../assets/lottie/dots loading edit.json';
+import animationData from '../../assets/lottie/dotsLoadingEdit.json';
 
 
 
