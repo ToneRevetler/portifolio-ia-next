@@ -22,6 +22,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/assets/gps-lib/SplitText.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/assets/gps-lib/SplitText.tsx", "components/motion-primitives/spinning-text.tsx", "src/assets/gps-lib/SpinningText.jsx"],
   "exclude": ["node_modules"]
 }
