@@ -43,7 +43,7 @@ export default function InputEmailCopy() {
   }
 
   return <>
-    <div className="cursor-pointer flex md:text-lg mt-6 w-fit items-center relative overflow-hidden ">
+    <div className="cursor-pointer flex md:text-lg pt-6 w-fit items-center relative overflow-hidden ">
       <div className="p-2 border-1 border-blue-600 bg-blue-600">
         <FaRegCopy className="text-white" />
       </div>
