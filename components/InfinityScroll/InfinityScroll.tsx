@@ -24,9 +24,9 @@ const logos = [
 export const InfinityScroll = () => {
   return (
     <section className="w-full overflow-hidden">
-      <div className="infinite-scroll-wrapper">
-        <div className="infinite-scroll-track border border-gray-300 py-4 ">
-          {[...logos, ...logos].map((item, index) => (
+      <div className="infinite-scroll-wrapper border border-gray-300 py-4">
+        <div className="infinite-scroll-track">
+          {[...logos, ...logos, ...logos].map((item, index) => (
             <div key={index} className="item border border-gray-300 rounded-full">
               {item.icon}
               <p>{item.content}</p>
