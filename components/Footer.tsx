@@ -13,8 +13,8 @@ export default function Footer() {
         <div className="grid md:grid-cols-2 items-center justify-items-center pb-8 gap-8 md:gap-2">
           <div className="grid gap-2 text-sm text-gray-800 antialiased md:justify-items-start md:w-full">
             <p className="flex items-center gap-1">Feito com  <span><RiNextjsFill className="text-2xl" /></span> Next Js</p>
-            <p className="flex items-center gap-1">Estilizado com <span><IoLogoVercel className="text-xl" /></span> Tailwind</p>
-            <p className="flex items-center gap-1">Hospedado na <span><RiTailwindCssFill className="text-2xl" /></span>  Vercel</p>
+            <p className="flex items-center gap-1">Estilizado com <span><RiTailwindCssFill className="text-xl" /></span> Tailwind</p>
+            <p className="flex items-center gap-1">Hospedado na <span><IoLogoVercel className="text-2xl" /></span>  Vercel</p>
           </div>
           <InputEmailCopyFooter />
         </div>
