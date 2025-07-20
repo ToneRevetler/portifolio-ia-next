@@ -21,7 +21,7 @@ export default function ProjectSection() {
         >
           O QUE EU JÁ FIZ?
         </GradientText>
-        <h2 className={`${titleFont.className} text-gray-800 pt-2  font-bold md:text-5xl tracking-wider`}>Meus Projetos</h2>
+        <h2 className={`${titleFont.className} text-gray-800 pt-2  font-bold md:text-5xl text-3xl tracking-wider`}>Meus Projetos</h2>
       </div>
       <div className="container mx-auto grid grid-cols-1 grid-rows-2 md:grid-cols-2 gap-8 mt-8 md:mt-12">
         <ProjectCard
