@@ -1,6 +1,7 @@
 import { Lexend } from "next/font/google";
 import Image from "next/image";
 import SocialMedia from "../components/social/SocialMedia";
+import WhatsAppButton from "./social/WhatsAppButton";
 import GradientText from "@/assets/gps-lib/GradientText";
 
 const titleFont = Lexend({ subsets: ["latin"], weight: "700" });
@@ -17,7 +18,7 @@ export default function AboutMe() {
             showBorder={false}
             className="custom-class text-xl pb-4 pr-2"
           >
-            QUEM SOU EU? 
+            QUEM SOU EU?
           </GradientText>
           <div className="text-gray-600">
             <p className="pb-2">Olá! Eu sou o Tone, desenvolvedor Front-end e atualmente moro em Indaiatuba.</p>
@@ -25,6 +26,7 @@ export default function AboutMe() {
             <p className="">Além disso, estou expandindo minhas habilidades estudando <strong> Next.js, Tailwind</strong> e <strong> integração com APIs de Inteligência Artificial.</strong> Também venho mergulhando no universo do back-end com <strong> Node.js</strong> e testes automatizados com <strong> Jest.</strong></p>
             <p className="pb-6">Estou sempre em busca de novos desafios para evoluir como desenvolvedor. Você pode me encontrar no GitHub ou no LinkedIn. Vamos conversar?</p>
           </div>
+          < WhatsAppButton />
           < SocialMedia />
         </div>
         <div className="relative md:w-1/3">

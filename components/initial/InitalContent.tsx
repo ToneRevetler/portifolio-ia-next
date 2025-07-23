@@ -53,7 +53,7 @@ export default function InitialContent() {
         </h3>
       </div>
       <p className="text-gray-600 text-base md:w-2/3 pt-4 md:pt-10">
-        Se você está buscando um Desenvolvedor Front-end dedicado, apaixonado por criar interfaces incríveis e sempre em evolução, estou à disposição para conversar! Vamos transformar ideias em projetos reais e impactantes!
+        Se você está buscando um Desenvolvedor dedicado, apaixonado por criar interfaces incríveis e sempre em evolução, estou à disposição para conversar! Vamos transformar ideias em projetos reais e impactantes!
       </p>
       <SocialMedia />
       <InputEmailCopy />

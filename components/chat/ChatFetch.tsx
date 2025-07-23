@@ -30,7 +30,7 @@ export default async function ChatFetch(res: NextApiResponse, req: NextApiReques
                 `Formação: ${curriculo.formacao}. ` +
                 `Projetos: ${curriculo.projetos.join(', ')}. ` +
                 `Se não souber algo, diga que vai verificar e responda apenas com fatos.Nunca resposda que é um modelo de IA.`+
-                'Hobbys, gosta de desenhar e jogos. tem veiculo proprio para caso precise.'
+                'Hobbys, gosta de desenhar e jogos. tem veiculo proprio para caso precise trabalhar na região.'
 
             }]
           },

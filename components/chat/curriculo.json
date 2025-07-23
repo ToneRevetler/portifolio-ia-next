@@ -1,7 +1,7 @@
 {
-  "nome": "nome, Tone Revetler mora em Indaiatuba SP, tem 23 anos, gosta de tecnologia e desenho",
-  "experiencia": ["Dev Frontend na Empresa Sofá na Caixa desde 2023, é o meu emprego atual", "Design na empresa EBF capacetes", "Design na empresa Bureau Comunicação Visual"],
-  "habilidades": ["React", "Next", "Liquid", "Tailwind", "Figma","HTML", "CSS", "JavaScript"],
-  "formacao": "Cursando Engenharia de Software EAD na faculdade Cruzeiro do Sul",
+  "nome": "nome, Tone Revetler mora em Indaiatuba SP, tem 23 anos, gosta de tecnologia e desenho. Possui veiculo proprio para trabalhar na região",
+  "experiencia": ["Dev Frontend na Empresa Sofá na Caixa desde 2023, é o meu emprego atual, atuo tambem na Eco Flame Garden", "Design na empresa EBF capacetes", "Design na empresa Bureau Comunicação Visual"],
+  "habilidades": ["React", "Next", "Liquid","Shopify", "Tailwind", "Figma","HTML", "CSS", "JavaScript", "NodeJs"],
+  "formacao": "Cursando Engenharia de Software EAD na faculdade Cruzeiro do Sul, além de fazer cursos avulsos de programação, tem inglês básico para intermediario",
   "projetos": ["Sofá na Caixa um ecommerce feito na shopify com Liquid, HTML, CSS e JavaScript", "Eco Flame um ecommerce feito na shopify com Liquid, HTML, CSS e JavaScript", "Ocean Pools uma ladding page com integração com Form de envio de email", " Casa sol foi um Freelance de um ecommerce feito na shopify com Liquid, HTML, CSS e JavaScript"]
 }
