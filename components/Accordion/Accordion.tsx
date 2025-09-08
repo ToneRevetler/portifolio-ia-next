@@ -9,7 +9,7 @@ const titleFont = Lexend({ subsets: ["latin"], weight: "700" });
 
 export default function ExperienceAccordion() {
   return <>
-    <section className="container mx-auto py-12">
+    <section className="container mx-auto py-12 md:px-4">
       <div className="grid px-4 md:px-0 md:grid-cols-2 gap-8 md:gap-4">
         <div>
           <GradientText

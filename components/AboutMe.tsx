@@ -8,7 +8,7 @@ const titleFont = Lexend({ subsets: ["latin"], weight: "700" });
 
 export default function AboutMe() {
   return <>
-    <section id="aboutMe" className="container mx-auto">
+    <section id="aboutMe" className="container mx-auto md:px-4 pb-4 md:pb-0">
       <h2 className={`${titleFont.className} text-center my-8 md:my-20 text-gray-800 font-bold md:text-5xl text-3xl tracking-wider`}>Sobre mim</h2>
       <div className="grid px-4 md:px-0 gap-8 md:pb-8 md:flex md:justify-between">
         <div className=" md:w-1/2">

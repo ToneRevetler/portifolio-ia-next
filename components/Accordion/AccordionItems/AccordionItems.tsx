@@ -22,7 +22,7 @@ const AccordionItem = ({ title, content, subtitle, img, date }: AccordionItemPro
       >
         <div className="flex gap-2">
           <Image className="rounded-full h-16 w-16 bg-cover" src={img} height={60} width={60} alt={title} />
-          <div className="flex flex-col justify-center">
+          <div className="flex flex-col justify-center max-w-34 md:max-w-none">
             <h4 className="font-semibold text-gray-800 ">
               {title}
             </h4>

@@ -14,7 +14,7 @@ export default function Header() {
 
   return (
     <nav className="border-b-1 border-gray-200">
-      <div className="container mx-auto py-4 grid grid-cols-2 px-4 md:px-0 md:grid-cols-3">
+      <div className="container mx-auto py-4 grid grid-cols-2 px-4  md:grid-cols-3">
         <div>
           <Image src="/images/project/Logo.png" alt="Logo" width={80} height={80} className="w-18 h-14 md:h-12 md:w-16" />
         </div>
@@ -27,7 +27,7 @@ export default function Header() {
         </button>
         <ul
           className={`${isMenuOpen ? "block" : "hidden"
-            }  md:flex text-xl md:text-lg shadow-lg md:gap-4 md:shadow-none text-blue-800 px-4 py-8 md:py-0 items-center justify-center font-semibold absolute md:static top-16 left-0 w-full bg-white md:bg-transparent md:w-auto`}
+            } z-10  md:flex text-xl md:text-lg shadow-lg md:gap-4 md:shadow-none text-blue-800 px-4 py-8 md:py-0 items-center justify-center font-semibold absolute md:static top-18 left-0 w-full bg-white md:bg-transparent md:w-auto`}
         >
           <li className="py-4 md:py-0 ">
             <a href="#project" className="hover:text-gray-500 scroll-smooth" >Projetos</a>

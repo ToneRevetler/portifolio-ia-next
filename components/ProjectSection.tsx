@@ -11,7 +11,7 @@ const SofaNaCaixa = "/images/project/SofaNaCaixalMockup.png"
 
 export default function ProjectSection() {
   return <>
-    <section id="project" className="bg-gray-50 py-12 p-4 scroll-smooth">
+    <section id="project" className="bg-gray-50 py-12 px-4  scroll-smooth">
       <div className="container mx-auto">
         <GradientText
           colors={["#2130cf", "#535dca ", "#c7ccff", "#535dca ", "#2130cf"]}
