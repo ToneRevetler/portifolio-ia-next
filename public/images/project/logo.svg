@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 345 281" fill="none">
+  <defs>
+    <linearGradient id="top-mark" x1="54" y1="62" x2="303" y2="96" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#315ba7" />
+      <stop offset="0.58" stop-color="#2b5aa8" />
+      <stop offset="1" stop-color="#00afe5" />
+    </linearGradient>
+    <linearGradient id="left-mark" x1="55" y1="186" x2="151" y2="186" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#08afe3" />
+      <stop offset="1" stop-color="#00a6dc" />
+    </linearGradient>
+    <linearGradient id="leg-mark" x1="194" y1="169" x2="286" y2="250" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#06333f" />
+      <stop offset="0.28" stop-color="#087b9f" />
+      <stop offset="1" stop-color="#05afe1" />
+    </linearGradient>
+  </defs>
+
+  <path
+    d="M54 26H231C273 26 303 55 303 95C303 134 274 164 234 164H186V118H232C248 118 259 109 259 95C259 82 249 72 234 72H87L54 26Z"
+    fill="url(#top-mark)"
+  />
+  <path
+    d="M55 254V176C55 143 79 118 113 118H151V164H114C104 164 99 171 99 181V254H55Z"
+    fill="url(#left-mark)"
+  />
+  <path d="M185 164H237L305 254H250L185 179V164Z" fill="url(#leg-mark)" />
+  <path d="M143 70H187V254H143V70Z" fill="#2E59A6" />
+</svg>

@@ -16,7 +16,7 @@ export default function NotFound() {
           <FuzzyText
             baseIntensity={0.18}
           >
-            Not Found
+            Página não encontrada
           </FuzzyText>
         </p>
         <Link href="/" className="mt-6 inline-block text-blue-600 hover:underline border-blue-600 p-4 border-1 rounded-4xl">
