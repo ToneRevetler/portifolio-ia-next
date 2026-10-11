@@ -1,23 +1,32 @@
 'use client'
 
 import ChatForm from "./ChatForm";
-import { RxAvatar } from "react-icons/rx";
+import { FiMessageCircle, FiZap } from "react-icons/fi";
 
 export default function ChatInterface() {
 
   return (
-    <div className="md:my-12 max-w-screen text-animation ">
-      <h3 className="text-gray-800 text-xl md:text-center font-bold py-4 md:pb-8">Me Faça uma Pergunta Por Aqui! 😜</h3>
-      <div className="w-full h-[30rem] md:h-[38rem] grid md:justify-center">
-        <div className="md:max-w-full md:w-lg  flex flex-col  min-h-0 justify-between">
-          <div className="p-4 rounded-t-xl w-full flex gap-2 items-center text-white bg-gradient-to-r from-[#00aed5] to-[#2130cf] ">
-            <RxAvatar className="text-4xl" />
-            <h2>IA Tone</h2>
+    <aside className="mx-auto w-full max-w-xl text-animation lg:justify-self-end" aria-labelledby="assistant-title">
+      <div className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-lg shadow-slate-900/5">
+        <div className="flex items-center justify-between border-b border-slate-200 px-5 py-4 sm:px-6">
+          <div className="flex items-center gap-3">
+            <span className="grid h-11 w-11 place-items-center rounded-lg bg-blue-700 text-xl text-white">
+              <FiMessageCircle aria-hidden="true" />
+            </span>
+            <div>
+              <h2 id="assistant-title" className="font-bold text-slate-950">Assistente do portfólio</h2>
+              <p className="text-xs text-slate-500">Respostas baseadas na minha experiência</p>
+            </div>
           </div>
-
+          <span className="inline-flex items-center gap-1 text-xs font-bold text-blue-700">
+            <FiZap aria-hidden="true" /> IA
+          </span>
+        </div>
+        <div className="h-[30rem] sm:h-[32rem]">
           <ChatForm />
         </div>
       </div>
-    </div>
+      <p className="mt-3 text-center text-xs text-slate-500">Você pode perguntar sobre Shopify, projetos ou experiência profissional.</p>
+    </aside>
   );
 }

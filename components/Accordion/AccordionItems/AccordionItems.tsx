@@ -1,5 +1,8 @@
-import { useState, useRef, ReactNode } from "react";
+'use client';
+
+import { useId, useState, type ReactNode } from "react";
 import Image from "next/image";
+import { FiChevronDown } from "react-icons/fi";
 
 type AccordionItemProps = {
   title: string;
@@ -7,42 +10,48 @@ type AccordionItemProps = {
   content: ReactNode;
   img: string;
   date: string;
+  defaultOpen?: boolean;
 };
 
-const AccordionItem = ({ title, content, subtitle, img, date }: AccordionItemProps) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const panelRef = useRef<HTMLDivElement>(null);
+const AccordionItem = ({ title, content, subtitle, img, date, defaultOpen = false }: AccordionItemProps) => {
+  const [isOpen, setIsOpen] = useState(defaultOpen);
+  const panelId = useId();
+  const buttonId = useId();
 
   return (
-    <div className="mb-2 border-b border-gray-300" >
+    <div className={`transition-colors duration-200 ${isOpen ? "bg-slate-50/80" : "bg-white"}`}>
+      <h3>
       <button
-        className={`accordion w-full text-left px-2 py-4 flex justify-between  cursor-pointer ${isOpen ? "active" : ""
-          }`}
-        onClick={() => setIsOpen(!isOpen)}
+        id={buttonId}
+        type="button"
+        aria-expanded={isOpen}
+        aria-controls={panelId}
+        className="group flex w-full cursor-pointer items-center gap-3 px-4 py-5 text-left transition-colors hover:bg-slate-50 focus-visible:relative focus-visible:z-10 focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-blue-700 sm:gap-4 sm:px-6 sm:py-6"
+        onClick={() => setIsOpen((open) => !open)}
       >
-        <div className="flex gap-2">
-          <Image className="rounded-full h-16 w-16 bg-cover" src={img} height={60} width={60} alt={title} />
-          <div className="flex flex-col justify-center max-w-34 md:max-w-none">
-            <h4 className="font-semibold text-gray-800 ">
-              {title}
-            </h4>
-            <p className="text-gray-600 text-sm">
-              {subtitle}
-            </p>
-          </div>
-        </div>
-        <p className="self-center text-gray-600 text-sm">
-          {date}
-        </p>
+        <Image className="h-11 w-11 shrink-0 rounded-lg border border-slate-200 object-cover sm:h-12 sm:w-12" src={img} height={48} width={48} alt="" />
+        <span className="grid min-w-0 flex-1 gap-2 sm:grid-cols-[1fr_auto] sm:items-center sm:gap-4">
+          <span className="min-w-0">
+            <span className="block text-sm font-semibold leading-6 text-slate-900 sm:text-base">{title}</span>
+            <span className="mt-0.5 block text-sm font-normal leading-5 text-slate-500">{subtitle}</span>
+          </span>
+          <span className="text-xs font-normal tabular-nums text-slate-500">{date}</span>
+        </span>
+        <FiChevronDown aria-hidden="true" className={`h-4 w-4 shrink-0 text-slate-400 transition-transform duration-300 motion-reduce:transition-none ${isOpen ? "rotate-180" : ""}`} />
       </button>
+      </h3>
       <div
-        ref={panelRef}
-        className="panel overflow-hidden transition-all duration-300 ease-in-out"
-        style={{
-          maxHeight: isOpen ? panelRef.current?.scrollHeight + "px" : "0px",
-        }}
+        id={panelId}
+        role="region"
+        aria-labelledby={buttonId}
+        aria-hidden={!isOpen}
+        inert={!isOpen}
+        data-open={isOpen}
+        className="experience-panel"
       >
-        <div className="p-4 pt-2 text-gray-600 text-sm">{content}</div>
+        <div className="min-h-0 overflow-hidden">
+          <div className="px-5 pb-6 text-sm leading-7 text-slate-600 sm:pl-[5.5rem] sm:pr-12 [&_ul]:list-outside [&_ul]:space-y-2 [&_ul]:pl-4 [&_li::marker]:text-slate-400">{content}</div>
+        </div>
       </div>
     </div>
   );
@@ -50,31 +59,32 @@ const AccordionItem = ({ title, content, subtitle, img, date }: AccordionItemPro
 
 const Accordion = () => {
   return (
-    <div>
-      <AccordionItem title="Desenvolvedor Front End" subtitle="Sofá Na Caixa"
+    <div className="overflow-hidden rounded-xl border border-slate-200 divide-y divide-slate-200">
+      <AccordionItem title="Desenvolvedor front-end" subtitle="Sofá Na Caixa"
         content={
           <ul className="list-disc list-inside space-y-1">
-            <li>Criação de temas para Shopify</li>
-            <li>Gestão de múltiplas lojas dentro da Shopify</li>
+            <li>Desenvolvimento e manutenção de temas Shopify</li>
+            <li>Manutenção de múltiplas lojas Shopify</li>
             <li>Cadastro de produtos</li>
             <li>Desenvolvimento de componentes personalizados</li>
-            <li>Desenvolvimento de Landing Pages com Next.js</li>
+            <li>Desenvolvimento de landing pages com Next.js</li>
           </ul>
         }
         img="/images/experience/logos/sofa.jpeg"
-        date="Fev 2024 - Atual" />
+        date="Fev 2024 — Atual"
+        defaultOpen />
       <AccordionItem
-        title="Desenvolvedor Júnior"
+        title="Desenvolvedor júnior"
         subtitle="Eco Flame"
         content={
           <ul className="list-disc list-inside space-y-1">
-            <li>Criação de Loja para Shopify</li>
+            <li>Criação e manutenção de loja Shopify</li>
             <li>Cadastro de produtos</li>
-            <li>Desenvolvimento em Liquid de componentes personalizados</li>
+            <li>Desenvolvimento de componentes personalizados em Liquid</li>
           </ul>
         }
         img="/images/experience/logos/eco.jpeg"
-        date="Nov 2023 - Atual" />
+        date="Nov 2023 — Atual" />
 
       <AccordionItem
         title="Designer gráfico"
@@ -83,17 +93,17 @@ const Accordion = () => {
           <ul className="list-disc list-inside space-y-1">
             <li>Criação de layouts para capacetes</li>
             <li>Finalização de adesivos para produção</li>
-            <li>Mockup 3D dos novos layouts</li>
-            <li>Apresentações no Power Point em 3D</li>
+            <li>Criação de mockups 3D para novos layouts</li>
+            <li>Criação de apresentações 3D em PowerPoint</li>
           </ul>
         }
         img="/images/experience/logos/ebf.jpeg"
-        date="Abr 2023 - Nov 2023" />
+        date="Abr — Nov 2023" />
       <AccordionItem
         title="Designer gráfico"
         subtitle="Bureau Comunicação Visual" content={
           <ul className="list-disc list-inside space-y-1">
-            <li>Fechamento de arquivos para cortes a laser, impressão e outdoor</li>
+            <li>Preparação de arquivos para corte a laser, impressão e outdoors</li>
             <li>Criação de fachadas de lojas</li>
             <li>Criação de adesivos</li>
             <li>Criação de ordens de serviço</li>
@@ -102,7 +112,7 @@ const Accordion = () => {
           </ul>
         }
         img="/images/experience/logos/bureau.jpeg"
-        date="Jun 2022 - Abr 2023" />
+        date="Jun 2022 — Abr 2023" />
     </div>
   );
 };

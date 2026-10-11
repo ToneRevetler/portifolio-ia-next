@@ -1,38 +1,27 @@
 import { Lexend } from "next/font/google";
 import Image from "next/image";
-import SocialMedia from "../components/social/SocialMedia";
-import WhatsAppButton from "./social/WhatsAppButton";
-import GradientText from "@/assets/gps-lib/GradientText";
 
 const titleFont = Lexend({ subsets: ["latin"], weight: "700" });
 
 export default function AboutMe() {
   return <>
-    <section id="aboutMe" className="container mx-auto md:px-4 pb-4 md:pb-0">
-      <h2 className={`${titleFont.className} text-center my-8 md:my-20 text-gray-800 font-bold md:text-5xl text-3xl tracking-wider`}>Sobre mim</h2>
-      <div className="grid px-4 md:px-0 gap-8 md:pb-8 md:flex md:justify-between">
-        <div className=" md:w-1/2">
-          <GradientText
-            colors={["#2130cf", "#535dca ", "#c7ccff", "#535dca ", "#2130cf"]}
-            animationSpeed={6}
-            showBorder={false}
-            className="custom-class text-xl pb-4 pr-2"
-          >
-            QUEM SOU EU?
-          </GradientText>
-          <div className="text-gray-600">
-            <p className="pb-2">Olá! Eu sou o Tone, desenvolvedor Front-end e atualmente moro em Indaiatuba.</p>
-            <p className="">Trabalho com <strong> HTML, CSS, JavaScript</strong> e <strong>Liquid</strong> no dia a dia, criando experiências para e-commerces e sites.</p>
-            <p className="">Além disso, estou expandindo minhas habilidades estudando <strong> Next.js, Tailwind</strong> e <strong> integração com APIs de Inteligência Artificial.</strong> Também venho mergulhando no universo do back-end com <strong> Node.js</strong> e testes automatizados com <strong> Jest.</strong></p>
-            <p className="pb-6">Estou sempre em busca de novos desafios para evoluir como desenvolvedor. Você pode me encontrar no GitHub ou no LinkedIn. Vamos conversar?</p>
+    <section id="aboutMe" className="scroll-mt-20 bg-[#f8faff] px-5 py-20 sm:py-28 md:px-8">
+      <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[.85fr_1.15fr] lg:gap-20">
+        <div className="relative mx-auto w-full max-w-md lg:mx-0">
+          <div className="absolute -inset-4 rotate-3 rounded-[2rem] bg-blue-100" aria-hidden="true" />
+          <Image src="/images/about/me.png" alt="Retrato de Tone Revetler" width={640} height={561} sizes="(min-width: 640px) 448px, 90vw" className="relative aspect-[4/4.4] w-full rounded-[1.75rem] object-cover object-center shadow-xl" />
+          <div className="absolute -bottom-6 -right-3 rounded-2xl border border-slate-200 bg-white p-4 shadow-xl sm:right-6">
+            <p className="font-black text-slate-950">Indaiatuba, SP, Brasil</p>
           </div>
-          < WhatsAppButton />
-          < SocialMedia />
         </div>
-        <div className="relative md:w-1/3">
-          <Image src="/images/about/me.png" alt="foto minha" width={500} height={192} className="w-full object-cover object-center rounded-md" />
+        <div>
+          <p className="eyebrow text-blue-700">Sobre mim</p>
+          <h2 className={`${titleFont.className} mt-3 max-w-2xl text-4xl font-bold tracking-[-0.045em] text-slate-950 sm:text-5xl`}>Sou desenvolvedor front-end e comecei minha carreira no design gráfico.</h2>
+          <div className="mt-6 space-y-4 text-base leading-7 text-slate-600">
+            <p>Antes de trabalhar com código, meu dia a dia era criar layouts e preparar materiais gráficos. Hoje, essa experiência faz parte da maneira como trabalho com interfaces, com atenção à organização das informações e aos detalhes visuais.</p>
+            <p>Atualmente, trabalho principalmente com Shopify e Liquid, no desenvolvimento e na manutenção de lojas virtuais. Também utilizo React e Next.js em outros projetos e sigo estudando integrações e testes para ampliar meus conhecimentos.</p>
+          </div>
         </div>
-
       </div>
     </section>
   </>

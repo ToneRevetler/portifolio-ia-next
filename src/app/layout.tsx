@@ -9,14 +9,19 @@ const mainFont = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
-    default: "Portifólio | Tone Revetler",
-    template: "%s | Portifólio | Tone Revetler",
-    absolute: "Portifólio | Tone Revetler",
+    default: "Tone Revetler | Shopify Front-end Developer",
+    template: "%s | Tone Revetler",
+    absolute: "Tone Revetler | Shopify Front-end Developer",
   },
   robots: {
     follow: true,
     index: true,
-  }
+  },
+  description:
+    "Portfólio de Tone Revetler, desenvolvedor front-end especializado em Shopify, Liquid e lojas virtuais personalizadas.",
+  applicationName: "Tone Revetler | Shopify Front-end Developer",
+  authors: [{ name: "Tone Revetler" }],
+  creator: "Tone Revetler",
 }
 
 export default function RootLayout({
@@ -25,11 +30,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
       <head>
         <Script
           id="clarity-script"
-          strategy="beforeInteractive"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               (function(c,l,a,r,i,t,y){
@@ -42,8 +47,14 @@ export default function RootLayout({
         />
       </head>
       <body className={mainFont.className} >
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-md focus:bg-white focus:px-4 focus:py-2 focus:text-blue-800 focus:shadow-lg"
+        >
+          Pular para o conteúdo principal
+        </a>
         <Header />
-        {children}
+        <main id="main-content">{children}</main>
         <Footer />
       </body>
     </html>

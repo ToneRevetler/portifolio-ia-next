@@ -1,7 +1,6 @@
 'use client'
 
 import { Lexend } from "next/font/google";
-import GradientText from "@/assets/gps-lib/GradientText";
 import AccordionItems from "../Accordion/AccordionItems/AccordionItems";
 
 const titleFont = Lexend({ subsets: ["latin"], weight: "700" });
@@ -9,19 +8,12 @@ const titleFont = Lexend({ subsets: ["latin"], weight: "700" });
 
 export default function ExperienceAccordion() {
   return <>
-    <section className="container mx-auto py-12 md:px-4">
-      <div className="grid px-4 md:px-0 md:grid-cols-2 gap-8 md:gap-4">
+    <section id="experience" className="scroll-mt-24 bg-white px-5 py-20 sm:py-28 md:px-8">
+      <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[.7fr_1.3fr] lg:gap-16">
         <div>
-          <GradientText
-            colors={["#2130cf", "#535dca ", "#c7ccff", "#535dca ", "#2130cf"]}
-            animationSpeed={6}
-            showBorder={false}
-            className="custom-class text-xl"
-          >
-            MINHA CARREIRA
-          </GradientText>
-          <h2 className={`${titleFont.className} text-gray-800 pt-2  font-bold md:text-5xl text-3xl tracking-wider`}>Experiências</h2>
-          <p className="pt-4 text-gray-600 text-base">Ao longo da minha trajetória, participei de projetos que me desafiaram a evoluir tecnicamente e colaborar em equipes multidisciplinares.</p>
+          <h2 className={`${titleFont.className} text-3xl font-bold tracking-[-0.035em] text-slate-950 sm:text-4xl`}>Experiência profissional</h2>
+          <p className="mt-5 max-w-sm text-base leading-7 text-slate-600">Empresas em que trabalhei, cargos e principais atividades.</p>
+          <p className="mt-5 text-xs leading-5 text-slate-500">Datas e informações em revisão.</p>
         </div>
         <div>
          < AccordionItems />

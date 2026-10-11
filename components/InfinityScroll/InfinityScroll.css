@@ -37,3 +37,10 @@
     transform: translateX(calc(-50% - 1rem));
   }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .infinite-scroll-track {
+    animation: none;
+    transform: none;
+  }
+}
