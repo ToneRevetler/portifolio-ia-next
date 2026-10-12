@@ -1,25 +1,27 @@
 import "server-only";
 import curriculo from './curriculo.json'
 
-const REQUEST_TIMEOUT_MS = 12_000;
+const REQUEST_TIMEOUT_MS = 8_000;
+const DEFAULT_MODEL = 'gemini-3.5-flash-lite';
 
 type GeminiResponse = {
   candidates?: Array<{
     content?: {
-      parts?: Array<{ text?: string }>;
+      parts?: Array<{ text?: string; thought?: boolean }>;
     };
   }>;
 };
 
 export default async function ChatFetch(question: string): Promise<string> {
-  const apiKey = process.env.GEMINI_API_KEY ?? process.env.CODE;
+  const apiKey = process.env.CODE?.trim();
+  const model = process.env.GEMINI_MODEL?.trim() || DEFAULT_MODEL;
 
   if (!apiKey) {
-    throw new Error('A chave da API do chat não está configurada.');
+    throw new Error('A variável CODE da API do chat não está configurada.');
   }
 
   const data = await fetch(
-    'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent',
+    `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(model)}:generateContent`,
     {
       method: 'POST',
       headers: {
@@ -50,10 +52,7 @@ export default async function ChatFetch(question: string): Promise<string> {
           }],
         },
         generationConfig: {
-          temperature: 0.3,
-          maxOutputTokens: 300,
-          topP: 0.8,
-          topK: 10,
+          maxOutputTokens: 1024,
         },
       }),
     },
@@ -66,6 +65,7 @@ export default async function ChatFetch(question: string): Promise<string> {
 
   const response = await data.json() as GeminiResponse;
   const responseText = response.candidates?.[0]?.content?.parts
+    ?.filter((part) => !part.thought)
     ?.map((part) => part.text ?? '')
     .join('')
     .trim();
