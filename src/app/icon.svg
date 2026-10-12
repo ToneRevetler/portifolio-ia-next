@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" fill="none" role="img" aria-labelledby="icon-title">
+  <title id="icon-title">Logo de Tone Revetler</title>
+  <rect x="2" y="2" width="316" height="316" rx="62" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="4" />
+  <g transform="translate(-20 20)">
+    <path d="M54 26H231C273 26 303 55 303 95C303 134 274 164 234 164H186V118H232C248 118 259 109 259 95C259 82 249 72 234 72H87L54 26Z" fill="#2E59A6" />
+    <path d="M55 254V176C55 143 79 118 113 118H151V164H114C104 164 99 171 99 181V254H55Z" fill="#007F9F" />
+    <path d="M185 164H237L305 254H250L185 179V164Z" fill="#086582" />
+    <path d="M143 70H187V254H143V70Z" fill="#2E59A6" />
+  </g>
+</svg>

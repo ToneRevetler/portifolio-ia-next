@@ -9,7 +9,7 @@ export default function ProjectGrid({ projects }: { projects: GridProject[] }) {
     <div className="grid items-start gap-x-10 gap-y-14 md:grid-cols-2 lg:gap-x-14">
       {projects.map((project) => (
         <article key={project.index} aria-labelledby={`project-title-${project.index}`} className="min-w-0">
-          <div className="overflow-hidden rounded-lg border border-slate-200 bg-slate-50 p-4 sm:p-6">
+          <div className="overflow-hidden rounded-lg border border-slate-200 bg-white p-4 sm:p-6">
             <Image src={project.imageUrl} alt={`Interface da loja ${project.title}`} width={640} height={457} sizes="(min-width: 1280px) 584px, (min-width: 768px) 46vw, 90vw" className="aspect-[1.6/1] w-full object-contain" />
           </div>
           <p className="mt-5 text-xs font-medium text-slate-500">{project.category}</p>
