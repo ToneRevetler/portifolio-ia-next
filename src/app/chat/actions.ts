@@ -2,6 +2,7 @@
 import { headers } from 'next/headers';
 
 import ChatFetch from "../../../components/chat/ChatFetch"
+import { normalizeHistory, type ChatTurn } from '../../../components/chat/history';
 
 const MAX_MESSAGE_LENGTH = 500;
 const RATE_LIMIT_WINDOW_MS = 60_000;
@@ -45,7 +46,7 @@ function canMakeRequest(clientId: string) {
   return true;
 }
 
-export async function handleSubmit(message: string): Promise<ChatActionResult> {
+export async function handleSubmit(message: string, history: unknown = []): Promise<ChatActionResult> {
   if (typeof message !== 'string') {
     return { ok: false, error: 'Envie uma pergunta válida.' };
   }
@@ -57,6 +58,13 @@ export async function handleSubmit(message: string): Promise<ChatActionResult> {
       ok: false,
       error: `A pergunta deve ter entre 1 e ${MAX_MESSAGE_LENGTH} caracteres.`,
     };
+  }
+
+  let conversation: ChatTurn[];
+  try {
+    conversation = normalizeHistory(history);
+  } catch {
+    return { ok: false, error: 'Não consegui recuperar o contexto. Atualize a página para iniciar uma nova conversa.' };
   }
 
   const requestHeaders = await headers();
@@ -71,7 +79,7 @@ export async function handleSubmit(message: string): Promise<ChatActionResult> {
   }
 
   try {
-    const responseText = await ChatFetch(normalizedMessage);
+    const responseText = await ChatFetch(normalizedMessage, conversation);
     return { ok: true, text: responseText };
   } catch (error) {
     console.error('Erro ao responder no chat:', error);
