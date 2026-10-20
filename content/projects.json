@@ -1,0 +1,75 @@
+[
+  {
+    "index": "01",
+    "title": "Inflow Sofá",
+    "role": "Reconstrução do tema e estruturação de conteúdo",
+    "category": "Shopify · 2025–2026",
+    "description": "Propus e executei a reconstrução do tema como único desenvolvedor, partindo de um tema-base existente. Reorganizei o conteúdo e a estrutura dos templates para facilitar a manutenção e os experimentos.",
+    "deliveryLabel": "Resultado observado",
+    "delivery": "Após a reformulação e os ajustes, a loja passou a obter aprovação nos Core Web Vitals em mobile e desktop, conforme acompanhei no PageSpeed Insights.",
+    "details": [
+      { "title": "Contexto", "text": "A loja apresentava problemas de desempenho, principalmente no mobile. Havia vários templates de produto conforme as informações exibidas, o que tornava alterações e experimentos mais trabalhosos." },
+      { "title": "Conteúdo e manutenção", "text": "Estruturei as informações com metafields e metaobjetos. Consolidei um template principal de produto e um de coleção, preservando as exceções necessárias. Nesse projeto, a organização permitiu testar templates no mesmo tema, sem manter dois temas completos e sincronizar as demais alterações entre eles." },
+      { "title": "Testes A/B", "text": "Desenvolvi as variações e configurei os experimentos na ferramenta de testes: uma nova home para avaliar a reformulação visual da marca, mudanças nas páginas de produto e um botão de compra rápida fixo durante a rolagem. Participei das reuniões de análise com design e gestão; a decisão final sobre os resultados não era minha responsabilidade." },
+      { "title": "Integração de frete", "text": "Implementei a consulta de frete por CEP na página do produto, com uma requisição POST a uma API de cotação já existente. Minha responsabilidade foi a integração no front-end, não a criação da API." },
+      { "title": "Validação e publicação", "text": "Versionei as entregas com Git e acompanhei o desempenho pelo PageSpeed Insights. As alterações eram validadas por mim e pela equipe em homologação antes de seguir para produção." }
+    ],
+    "technologies": ["Shopify", "Liquid", "JavaScript", "Metafields e metaobjetos", "Testes A/B"],
+    "visual": "content",
+    "showDiagramInDetails": true,
+    "imageUrl": "/images/project/inflow-sofa-home-desktop.jpg",
+    "mobileImageUrl": "/images/project/inflow-sofa-home-mobile.jpg",
+    "link": "https://inflowsofa.com.br/"
+  },
+  {
+    "index": "02",
+    "title": "Inflow Kids",
+    "role": "Implementação integral de uma nova loja",
+    "category": "Shopify · Projeto realizado na Inflow",
+    "description": "Implementei todo o front-end da nova loja como único desenvolvedor, a partir dos layouts fornecidos pela equipe de design e UX no Figma.",
+    "deliveryLabel": "Além das interfaces",
+    "delivery": "Também cuidei das configurações técnicas de pixels, scripts e SEO da nova operação.",
+    "details": [
+      { "title": "Participação e autoria", "text": "O projeto foi realizado durante meu vínculo com a Inflow. Personalizei o tema com Liquid, JavaScript, HTML e CSS. A criação dos layouts e da experiência visual ficou com a equipe de design e UX; minha responsabilidade foi a implementação." }
+    ],
+    "technologies": ["Shopify", "Liquid", "JavaScript", "HTML/CSS", "Figma para código"],
+    "visual": "implementation",
+    "showDiagramInDetails": true,
+    "imageUrl": "/images/project/inflow-kids-produto-desktop.jpg",
+    "mobileImageUrl": "/images/project/inflow-kids-produto-mobile.jpg",
+    "link": "https://inflowkids.com.br/products/cama-montessoriana-infantil-sonhos-one-solteiro-verde?variant=53620041875824"
+  },
+  {
+    "index": "03",
+    "title": "Casa Sol Outdoor",
+    "role": "Desenvolvimento completo do front-end",
+    "category": "Shopify · Freelance",
+    "description": "Desenvolvi todo o front-end de uma nova loja Shopify a partir dos layouts fornecidos no Figma.",
+    "deliveryLabel": "Escopo da entrega",
+    "delivery": "Além das interfaces do tema, instalei os pixels e as integrações necessárias à operação.",
+    "details": [
+      { "title": "Minha responsabilidade", "text": "O trabalho freelance abrangeu a implementação completa do front-end, não apenas componentes isolados. Trabalhei com Shopify, Liquid e JavaScript, seguindo os layouts recebidos." }
+    ],
+    "technologies": ["Shopify", "Liquid", "JavaScript"],
+    "imageUrl": "/images/project/casa-sol-captura-previa.jpg",
+    "mobileImageUrl": "/images/project/casa-sol-mobile-captura.jpg",
+    "link": "https://casasoloutdoor.com/"
+  },
+  {
+    "index": "04",
+    "title": "Sofá na Caixa",
+    "role": "Desenvolvimento, lançamento e evolução em equipe",
+    "category": "Shopify · 2023–2025",
+    "description": "Participei do desenvolvimento e lançamento da loja em equipe. Implementei interfaces e funcionalidades e colaborei nas reformulações, na otimização do front-end e no SEO.",
+    "deliveryLabel": "Atuação no grupo",
+    "delivery": "Também participei da reformulação da Ecoflame Garden e fiz manutenção na loja Shopify Little Duck, empresas do mesmo grupo.",
+    "details": [
+      { "title": "Diagnóstico de rastreamento", "text": "Participei do diagnóstico de falhas de rastreamento. A substituição da solução, realizada pela equipe responsável, resultou em melhora do LCP. Essa melhoria foi resultado de um trabalho conjunto." },
+      { "title": "Sistema interno", "text": "Desenvolvi o front-end e o layout de etiquetas de um sistema de identificação de módulos de sofá para estoque e produção, utilizando HTML, CSS e JavaScript." }
+    ],
+    "technologies": ["Shopify", "Liquid", "HTML/CSS", "JavaScript", "SEO"],
+    "imageUrl": "/images/project/sofa-na-caixa-home-desktop.jpg",
+    "mobileImageUrl": "/images/project/sofa-na-caixa-home-mobile.jpg",
+    "link": "https://sofanacaixa.com.br/"
+  }
+]

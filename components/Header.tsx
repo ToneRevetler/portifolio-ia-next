@@ -29,7 +29,7 @@ export default function Header() {
               />
               <span className="hidden text-sm font-bold leading-tight text-slate-900 sm:block">
                 Tone Revetler
-                <span className="block text-xs font-medium text-slate-500">Desenvolvedor Shopify</span>
+                <span className="block text-xs font-medium text-slate-500">Desenvolvedor Web</span>
               </span>
             </Link>
           </div>
@@ -50,21 +50,24 @@ export default function Header() {
               } absolute left-0 top-18 z-10 w-full border-b border-slate-200 bg-white px-5 py-6 text-lg font-semibold text-slate-800 shadow-xl md:static md:flex md:w-auto md:items-center md:justify-center md:gap-8 md:border-0 md:bg-transparent md:p-0 md:text-sm md:shadow-none`}
           >
             <li className="py-3 md:py-0">
-              <a href="#project" className="transition hover:text-blue-700" onClick={() => setIsMenuOpen(false)}>Projetos</a>
+              <a href="/#project" className="transition hover:text-blue-700" onClick={() => setIsMenuOpen(false)}>Projetos</a>
             </li>
             <li className="border-t border-slate-200 py-3 md:border-0 md:py-0">
-              <a href="#experience" className="transition hover:text-blue-700" onClick={() => setIsMenuOpen(false)}>Experiência</a>
+              <a href="/#experience" className="transition hover:text-blue-700" onClick={() => setIsMenuOpen(false)}>Experiência</a>
             </li>
             <li className="border-t border-slate-200 py-3 md:border-0 md:py-0">
-              <a href="#aboutMe" className="transition hover:text-blue-700" onClick={() => setIsMenuOpen(false)}>Sobre</a>
+              <a href="/#aboutMe" className="transition hover:text-blue-700" onClick={() => setIsMenuOpen(false)}>Sobre</a>
             </li>
             <li className="border-t border-slate-200 py-3 md:border-0 md:py-0">
-              <a href="#contact" className="transition hover:text-blue-700" onClick={() => setIsMenuOpen(false)}>Contato</a>
+              <a href="/#contact" className="transition hover:text-blue-700" onClick={() => setIsMenuOpen(false)}>Contato</a>
             </li>
           </ul>
           <div className="hidden md:flex md:items-center md:justify-end">
             <a
-              href="mailto:mirandatone@outlook.com"
+              href="https://wa.me/5519981135074"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Vamos conversar pelo WhatsApp (abre em nova aba)"
               className="inline-flex items-center gap-2 rounded-lg bg-slate-950 px-5 py-2.5 text-sm font-bold text-white transition hover:bg-blue-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700"
             >
               Vamos conversar

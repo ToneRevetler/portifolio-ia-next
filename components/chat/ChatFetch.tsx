@@ -1,5 +1,6 @@
 import "server-only";
 import curriculo from './curriculo.json'
+import projects from '../../content/projects.json';
 import { normalizeHistory, type ChatTurn } from './history';
 
 const REQUEST_TIMEOUT_MS = 8_000;
@@ -14,6 +15,10 @@ type GeminiResponse = {
 };
 
 export default async function ChatFetch(question: string, history: ChatTurn[] = []): Promise<string> {
+  if (process.env.NODE_ENV === 'production' && process.env.PORTFOLIO_CHAT_ENABLED !== 'true') {
+    throw new Error('O assistente está temporariamente indisponível.');
+  }
+
   const conversation = normalizeHistory(history);
   const apiKey = process.env.CODE?.trim();
   const model = process.env.GEMINI_MODEL?.trim() || DEFAULT_MODEL;
@@ -67,14 +72,23 @@ export default async function ChatFetch(question: string, history: ChatTurn[] = 
               'Exemplos de estilo (use fatos da base, não complete lacunas): ' +
               'Pergunta: "Qual é seu nome?" Resposta: "Sou o assistente do portfólio do Tone." ' +
               'Pergunta: "Oi" Resposta: "Oi! O que você gostaria de saber?" ' +
-              'Pergunta: "Qual é a sua experiência com Shopify?" Resposta: "O foco é desenvolvimento front-end em Shopify com Liquid, HTML, CSS e JavaScript. Entre os projetos estão Sofá Na Caixa e Casa Sol Outdoor, este último voltado ao mercado dos Estados Unidos." ' +
+              'Pergunta: "Qual é a sua experiência com Shopify?" Resposta: "O foco é desenvolvimento front-end em Shopify com Liquid, HTML, CSS e JavaScript. Entre os projetos estão a reconstrução do tema da Inflow Sofá e a implementação integral da Inflow Kids a partir do Figma, além de Casa Sol Outdoor e Sofá na Caixa." ' +
               'Pergunta: "Qual foi o aumento de conversão?" Resposta: "Não tenho esse resultado confirmado por aqui." ' +
               '\nDados profissionais:\n' +
               `Perfil: ${curriculo.nome}. ` +
               `Experiência: ${curriculo.experiencia.join(', ')}. ` +
               `Habilidades: ${curriculo.habilidades.join(', ')}. ` +
               `Formação: ${curriculo.formacao}. ` +
-              `Projetos: ${curriculo.projetos.join(', ')}.`,
+              `Projetos selecionados: ${projects.map(project => [
+                project.title, project.category, project.role, project.description,
+                project.delivery, ...project.details.map(detail => `${detail.title}: ${detail.text}`),
+                `Tecnologias: ${project.technologies.join(', ')}`,
+                project.link ? `Loja atual: ${project.link}` : 'Link da loja não informado',
+              ].join('\n')).join('\n\n')}. ` +
+              `Projetos complementares: ${curriculo.projetosComplementares.join('; ')}. ` +
+              `Idiomas: ${curriculo.idiomas}. ` +
+              `Contatos: ${curriculo.contatos.join('; ')}. ` +
+              `Limites das informações: ${curriculo.limites.join('; ')}.`,
           }],
         },
         generationConfig: {

@@ -8,7 +8,7 @@ type AccordionItemProps = {
   title: string;
   subtitle: string;
   content: ReactNode;
-  img: string;
+  img?: string;
   date: string;
   defaultOpen?: boolean;
 };
@@ -29,7 +29,7 @@ const AccordionItem = ({ title, content, subtitle, img, date, defaultOpen = fals
         className="group flex w-full cursor-pointer items-center gap-3 px-4 py-5 text-left transition-colors hover:bg-slate-50 focus-visible:relative focus-visible:z-10 focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-blue-700 sm:gap-4 sm:px-6 sm:py-6"
         onClick={() => setIsOpen((open) => !open)}
       >
-        <Image className="h-11 w-11 shrink-0 rounded-lg border border-slate-200 object-cover sm:h-12 sm:w-12" src={img} height={48} width={48} alt="" />
+        {img ? <Image className="h-11 w-11 shrink-0 rounded-lg border border-slate-200 object-cover sm:h-12 sm:w-12" src={img} height={48} width={48} alt="" /> : <span aria-hidden="true" className="grid h-11 w-11 shrink-0 place-items-center rounded-lg border border-slate-200 bg-white text-sm font-bold text-blue-700 sm:h-12 sm:w-12">IS</span>}
         <span className="grid min-w-0 flex-1 gap-2 sm:grid-cols-[1fr_auto] sm:items-center sm:gap-4">
           <span className="min-w-0">
             <span className="block text-sm font-semibold leading-6 text-slate-900 sm:text-base">{title}</span>
@@ -60,59 +60,36 @@ const AccordionItem = ({ title, content, subtitle, img, date, defaultOpen = fals
 const Accordion = () => {
   return (
     <div className="overflow-hidden rounded-xl border border-slate-200 divide-y divide-slate-200">
-      <AccordionItem title="Desenvolvedor front-end" subtitle="Sofá Na Caixa"
-        content={
-          <ul className="list-disc list-inside space-y-1">
-            <li>Desenvolvimento e manutenção de temas Shopify</li>
-            <li>Manutenção de múltiplas lojas Shopify</li>
-            <li>Cadastro de produtos</li>
-            <li>Desenvolvimento de componentes personalizados</li>
-            <li>Desenvolvimento de landing pages com Next.js</li>
-          </ul>
-        }
-        img="/images/experience/logos/sofa.jpeg"
-        date="Fev 2024 — Atual"
-        defaultOpen />
-      <AccordionItem
-        title="Desenvolvedor júnior"
-        subtitle="Eco Flame"
-        content={
-          <ul className="list-disc list-inside space-y-1">
-            <li>Criação e manutenção de loja Shopify</li>
-            <li>Cadastro de produtos</li>
-            <li>Desenvolvimento de componentes personalizados em Liquid</li>
-          </ul>
-        }
-        img="/images/experience/logos/eco.jpeg"
-        date="Nov 2023 — Atual" />
+      <AccordionItem title="Desenvolvedor Web Pleno" subtitle="Inflow Sofá" date="09/2025 - 09/2026" img="/images/experience/logos/inflow.jpeg" defaultOpen content={<ul className="list-disc space-y-2">
+        <li>Reconstruí o tema da Inflow Sofá a partir de um tema-base, como único desenvolvedor, e organizei o conteúdo com metafields e metaobjetos.</li>
+        <li>Desenvolvi variações de páginas e componentes e configurei testes A/B, participando das reuniões de análise com design e gestão.</li>
+        <li>Implementei todo o front-end da Inflow Kids a partir dos layouts da equipe de design e UX, além de configurações técnicas de pixels, scripts e SEO.</li>
+        <li>Integrei a consulta de frete por CEP na página do produto a uma API existente.</li>
+        <li>Acompanhei o desempenho pelo PageSpeed Insights e validei as entregas com a equipe em homologação, com versionamento em Git antes da publicação.</li>
+      </ul>} />
+      <AccordionItem title="Desenvolvedor Web / Front-end" subtitle="Ecoflame Garden · Sofá na Caixa · Little Duck" date="11/2023 - 09/2025" img="/images/experience/logos/sofa.jpeg" content={<ul className="list-disc space-y-2">
+        <li>Iniciei na Ecoflame Garden e, com a criação do Sofá na Caixa, passei a atuar também nessa operação. Trabalhei nas três empresas do mesmo grupo, com responsabilidades diferentes em cada loja.</li>
+        <li>Participei, em equipe, do desenvolvimento e lançamento do Sofá na Caixa, implementando interfaces e funcionalidades e colaborando em reformulações, otimização de front-end e SEO.</li>
+        <li>Participei da reformulação do front-end da Ecoflame Garden e realizei manutenção na loja Shopify Little Duck.</li>
+        <li>Colaborei no diagnóstico de falhas de rastreamento, junto à equipe responsável pela solução.</li>
+        <li>Desenvolvi o front-end e o layout de etiquetas de um sistema interno de identificação de módulos de sofá para estoque e produção, com HTML, CSS e JavaScript.</li>
+      </ul>} />
 
       <AccordionItem
         title="Designer gráfico"
         subtitle="EBF Capacetes"
         content={
-          <ul className="list-disc list-inside space-y-1">
-            <li>Criação de layouts para capacetes</li>
-            <li>Finalização de adesivos para produção</li>
-            <li>Criação de mockups 3D para novos layouts</li>
-            <li>Criação de apresentações 3D em PowerPoint</li>
-          </ul>
+          <p>Criei layouts para capacetes e mockups 3D e preparei adesivos para produção.</p>
         }
         img="/images/experience/logos/ebf.jpeg"
-        date="Abr — Nov 2023" />
+        date="04/2023 - 11/2023" />
       <AccordionItem
-        title="Designer gráfico"
-        subtitle="Bureau Comunicação Visual" content={
-          <ul className="list-disc list-inside space-y-1">
-            <li>Preparação de arquivos para corte a laser, impressão e outdoors</li>
-            <li>Criação de fachadas de lojas</li>
-            <li>Criação de adesivos</li>
-            <li>Criação de ordens de serviço</li>
-            <li>Aprovação feita diretamente com o cliente</li>
-            <li>Projetos de peças em acrílico</li>
-          </ul>
+        title="Designer Gráfico/Projetista"
+        subtitle="Bureau de Comunicação" content={
+          <p>Trabalhei com comunicação visual, fachadas e peças em acrílico, preparando arquivos para produção e acompanhando a aprovação com clientes.</p>
         }
         img="/images/experience/logos/bureau.jpeg"
-        date="Jun 2022 — Abr 2023" />
+        date="06/2022 - 04/2023" />
     </div>
   );
 };

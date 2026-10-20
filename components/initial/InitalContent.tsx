@@ -54,39 +54,39 @@ export default function InitialContent() {
           Tone Revetler
         </h1>
         <h2 className={`${titleFont.className} mt-5 max-w-2xl text-2xl font-bold leading-tight text-blue-700 sm:text-3xl`}>
-          Transformo necessidades de e-commerce em experiências Shopify sob medida.
+          Desenvolvedor Web | Shopify e <span className="whitespace-nowrap">E-commerce</span>
         </h2>
       </div>
-      <p className="mt-6 max-w-xl text-base leading-7 text-slate-600 sm:text-lg">
-        Desenvolvedor front-end com cerca de três anos de experiência em Shopify e Liquid, atuando entre design, implementação e evolução de lojas para o Brasil e os Estados Unidos.
+      <p className="mt-6 max-w-3xl text-base leading-7 text-slate-600 sm:text-lg">
+        Tenho cerca de três anos de experiência na construção e evolução de lojas Shopify. Desenvolvo interfaces a partir do Figma e trabalho na estrutura dos temas, na organização de conteúdo, no desempenho e na implementação de testes A/B. Já atuei em equipe e como único desenvolvedor.
       </p>
 
       <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-        <a href="#project" className="inline-flex items-center justify-center gap-2 rounded-lg bg-blue-700 px-6 py-3.5 text-sm font-bold text-white transition hover:bg-blue-800">
-          Explorar projetos
+        <a href="/#project" className="inline-flex items-center justify-center gap-2 rounded-lg bg-blue-700 px-6 py-3.5 text-sm font-bold text-white transition hover:bg-blue-800">
+          Conhecer os projetos
           <FiArrowDownRight aria-hidden="true" />
         </a>
-        <a href="mailto:mirandatone@outlook.com" className="inline-flex items-center justify-center rounded-lg border border-slate-300 bg-white px-6 py-3.5 text-sm font-bold text-slate-900 transition hover:border-slate-900">
-          Entrar em contato
+        <a href="/curriculo-tone-revetler.pdf" download="Curriculo-Tone-Revetler.pdf" className="inline-flex items-center justify-center rounded-lg border border-slate-300 bg-white px-6 py-3.5 text-sm font-bold text-slate-900 transition hover:border-slate-900 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-700">
+          Baixar currículo (PDF)
         </a>
       </div>
 
-      <dl className="mt-10 grid max-w-xl grid-cols-3 divide-x divide-slate-200 border-y border-slate-200 py-5">
+      <dl className="mt-10 grid max-w-xl gap-4 border-y border-slate-200 py-5 sm:grid-cols-3 sm:gap-0 sm:divide-x sm:divide-slate-200">
         <div className="pr-4">
           <dt className="text-xs font-semibold uppercase tracking-wide text-slate-500">Experiência</dt>
-          <dd className="mt-1 text-lg font-black text-slate-950">3 anos</dd>
+          <dd className="mt-1 text-lg font-black text-slate-950">Cerca de 3 anos</dd>
         </div>
-        <div className="px-4">
-          <dt className="text-xs font-semibold uppercase tracking-wide text-slate-500">Especialidade</dt>
-          <dd className="mt-1 text-lg font-black text-slate-950">Shopify</dd>
+        <div className="sm:px-4">
+          <dt className="text-xs font-semibold uppercase tracking-wide text-slate-500">No dia a dia</dt>
+          <dd className="mt-1 text-base font-semibold text-slate-950">Shopify, Liquid e JavaScript</dd>
         </div>
-        <div className="pl-4">
-          <dt className="text-xs font-semibold uppercase tracking-wide text-slate-500">Mercados</dt>
-          <dd className="mt-1 text-lg font-black text-slate-950">BR + EUA</dd>
+        <div className="sm:pl-4">
+          <dt className="text-xs font-semibold uppercase tracking-wide text-slate-500">Atuação</dt>
+          <dd className="mt-1 text-lg font-black text-slate-950">Front-end</dd>
         </div>
       </dl>
 
-      <div className="mt-6 flex items-center gap-5">
+      <div className="mt-6 flex flex-wrap items-center gap-5">
         <span className="flex items-center gap-2 text-sm font-medium text-slate-500"><FiMapPin aria-hidden="true" /> Indaiatuba, SP</span>
         <SocialMedia />
       </div>

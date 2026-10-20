@@ -9,17 +9,16 @@ const mainFont = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
-    default: "Tone Revetler | Shopify Front-end Developer",
+    default: "Tone Revetler | Desenvolvedor Web — Shopify e E-commerce",
     template: "%s | Tone Revetler",
-    absolute: "Tone Revetler | Shopify Front-end Developer",
   },
   robots: {
     follow: true,
     index: true,
   },
   description:
-    "Portfólio de Tone Revetler, desenvolvedor front-end especializado em Shopify, Liquid e lojas virtuais personalizadas.",
-  applicationName: "Tone Revetler | Shopify Front-end Developer",
+    "Portfólio de Tone Revetler, desenvolvedor web com atuação em front-end, Shopify e Liquid. Projetos, experiência profissional e currículo.",
+  applicationName: "Portfólio de Tone Revetler",
   authors: [{ name: "Tone Revetler" }],
   creator: "Tone Revetler",
 }

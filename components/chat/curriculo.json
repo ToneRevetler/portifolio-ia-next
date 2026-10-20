@@ -1,7 +1,39 @@
 {
-  "nome": "Tone Revetler, desenvolvedor front-end especializado em Shopify e Liquid",
-  "experiencia": ["Desenvolvedor front-end na Sofá Na Caixa desde fevereiro de 2024", "Desenvolvedor júnior na Eco Flame desde novembro de 2023", "Designer gráfico na EBF Capacetes", "Designer gráfico na Bureau Comunicação Visual"],
-  "habilidades": ["React", "Next.js", "Liquid", "Shopify", "Tailwind CSS", "Figma", "HTML", "CSS", "JavaScript", "Node.js"],
-  "formacao": "Cursa Engenharia de Software na modalidade EAD pela Universidade Cruzeiro do Sul e também realiza cursos de programação",
-  "projetos": ["Sofá Na Caixa, e-commerce desenvolvido em Shopify com Liquid, HTML, CSS e JavaScript", "Eco Flame Garden, e-commerce desenvolvido em Shopify com Liquid, HTML, CSS e JavaScript", "Ocean Pools, página em WordPress com formulário de contato", "Casa Sol Outdoor, projeto freelance de e-commerce em Shopify para o mercado dos Estados Unidos"]
+  "nome": "Tone Revetler Miranda Junior, desenvolvedor web com atuação em front-end, Shopify e e-commerce",
+  "experiencia": [
+    "Desenvolvedor Web Pleno em Inflow Sofá, 09/2025 - 09/2026. Reconstruí o tema da Inflow Sofá a partir de um tema-base, como único desenvolvedor. Após a reformulação e ajustes, a loja passou a obter aprovação nos Core Web Vitals em mobile e desktop, acompanhados no PageSpeed Insights. Estruturei conteúdo dinâmico com metafields e metaobjetos e consolidei templates de produto e coleção, facilitando a manutenção e os testes de templates no mesmo tema. Desenvolvi variações e configurei testes A/B de páginas e componentes, incluindo uma nova home e um botão de compra rápida fixo. Participei das reuniões de análise com design e gestão. Implementei todo o front-end da nova loja Inflow Kids a partir do Figma, com Liquid, JavaScript, HTML e CSS, além de configurações técnicas de pixels, scripts e SEO. Integrei a consulta de frete por CEP na página do produto, com requisição POST a uma API existente.",
+    "Desenvolvedor Web / Front-end | Empresas do mesmo grupo em Ecoflame Garden · Sofá na Caixa · Little Duck, 11/2023 - 09/2025. Iniciei na Ecoflame Garden e, com a criação do Sofá na Caixa, participei, em equipe, do desenvolvimento e lançamento da loja, implementando interfaces e funcionalidades e colaborando em reformulações, otimização de front-end e SEO. Participei da reformulação do front-end da Ecoflame Garden e realizei manutenção na loja Shopify Little Duck. Desenvolvi o front-end e o layout de etiquetas de um sistema interno de identificação de módulos de sofá para estoque e produção, com HTML, CSS e JavaScript.",
+    "EBF Capacetes · Designer Gráfico · 04/2023 - 11/2023",
+    "Bureau de Comunicação · Designer Gráfico/Projetista · 06/2022 - 04/2023"
+  ],
+  "habilidades": [
+    "Shopify, Liquid, JavaScript, HTML e CSS",
+    "Metafields e metaobjetos do Shopify",
+    "Implementação de interfaces a partir do Figma fornecido por design e UX",
+    "PageSpeed Insights e Core Web Vitals",
+    "Desenvolvimento e configuração de testes A/B; participação nas reuniões de análise, sem decisão final",
+    "Integração de API de cotação de frete já existente, incluindo requisição POST",
+    "Git; fluxo de desenvolvimento, homologação e produção com validação da equipe",
+    "Next.js, React e TypeScript: experiência profissional complementar em duas páginas institucionais",
+    "Instalação técnica de pixels, Google Analytics e Stape; configuração de mensuração feita por outra área"
+  ],
+  "formacao": "Engenharia de Software · Cruzeiro do Sul · Em andamento desde 2023",
+  "idiomas": "Inglês em estudo na Fluency Academy; nível de proficiência não informado",
+  "contatos": [
+    "E-mail: mirandatone@outlook.com",
+    "LinkedIn: https://www.linkedin.com/in/tone-revetler-506163188/",
+    "GitHub: https://github.com/ToneRevetler",
+    "Portfólio: https://www.tonerevetler.com.br/",
+    "Currículo em PDF: https://www.tonerevetler.com.br/curriculo-tone-revetler.pdf"
+  ],
+  "projetosComplementares": [
+    "Duas páginas institucionais com Next.js, React e TypeScript; empresa e período não informados",
+    "Sistema interno de identificação de módulos de sofá para estoque e produção: front-end e layout de etiquetas com HTML, CSS e JavaScript"
+  ],
+  "limites": [
+    "Reconstrução do tema da Inflow a partir de um tema-base existente; não autoria do design/UX",
+    "Aprovação de Core Web Vitals em mobile e desktop relatada a partir do PageSpeed Insights; sem valores históricos de antes/depois fornecidos",
+    "Sem ganhos de conversão, significância estatística ou métricas comerciais confirmados",
+    "Data do freelance Casa Sol Outdoor não informada; nome da ferramenta de testes A/B não confirmado"
+  ]
 }

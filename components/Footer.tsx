@@ -15,7 +15,7 @@ export default function Footer() {
         <div className="grid items-center gap-10 pb-12 md:grid-cols-2">
           <div>
             <p className="text-2xl font-black tracking-tight">Tone Revetler</p>
-            <p className="mt-2 max-w-sm text-sm leading-6 text-slate-400">Desenvolvedor front-end especializado em Shopify e Liquid, com foco em lojas virtuais personalizadas.</p>
+            <p className="mt-2 max-w-sm text-sm leading-6 text-slate-400">Desenvolvedor web com atuação em front-end, Shopify e Liquid.</p>
             <div className="mt-5 grid gap-2 text-xs text-slate-500 antialiased sm:grid-cols-3">
             <p className="flex items-center gap-1">Desenvolvido com <span><RiNextjsFill className="text-2xl" /></span> Next.js</p>
             <p className="flex items-center gap-1">Interface com <span><RiTailwindCssFill className="text-xl" /></span> Tailwind CSS</p>

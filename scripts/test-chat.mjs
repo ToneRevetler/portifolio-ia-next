@@ -13,6 +13,7 @@ const historyModule = { exports: {} };
 vm.runInNewContext(ts.transpileModule(historySource, { compilerOptions: { module: ts.ModuleKind.CommonJS } }).outputText, historyModule);
 const { normalizeHistory } = historyModule.exports;
 const profile = JSON.parse(await readFile(new URL('../components/chat/curriculo.json', import.meta.url), 'utf8'));
+const projects = JSON.parse(await readFile(new URL('../content/projects.json', import.meta.url), 'utf8'));
 
 function setup(env, response = { candidates: [{ content: { parts: [{ text: 'Resposta' }] } }] }, ok = true, live = false) {
   const calls = [];
@@ -21,6 +22,7 @@ function setup(env, response = { candidates: [{ content: { parts: [{ text: 'Resp
     require(name) {
       if (name === 'server-only') return {};
       if (name === './curriculo.json') return profile;
+      if (name === '../../content/projects.json') return projects;
       if (name === './history') return historyModule.exports;
       throw new Error('Unexpected import');
     },
@@ -40,6 +42,22 @@ assert.match(normal.calls[0].url, /gemini-3\.5-flash-lite:generateContent$/);
 assert.equal(normal.calls[0].options.headers['x-goog-api-key'], 'test-code');
 assert.equal(JSON.parse(normal.calls[0].options.body).contents[0].parts[0].text, 'Olá');
 assert.equal(normal.calls[0].options.cache, 'no-store');
+const prompt = JSON.parse(normal.calls[0].options.body).systemInstruction.parts[0].text;
+for (const project of projects) {
+  assert.ok(prompt.includes(project.description));
+  assert.ok(prompt.includes(project.delivery));
+  for (const detail of project.details) assert.ok(prompt.includes(detail.text));
+}
+for (const contact of profile.contatos) assert.ok(prompt.includes(contact));
+console.log('Content checks passed: shared project facts, detailed responsibilities and contacts.');
+
+const unpublishedChat = setup({ NODE_ENV: 'production', CODE: 'test-code' });
+await assert.rejects(unpublishedChat.chat('Olá'), /temporariamente indisponível/);
+assert.equal(unpublishedChat.calls.length, 0);
+const publishedChat = setup({ NODE_ENV: 'production', PORTFOLIO_CHAT_ENABLED: 'true', CODE: 'test-code' });
+assert.equal(await publishedChat.chat('Olá'), 'Resposta');
+assert.equal(publishedChat.calls.length, 1);
+console.log('Publication checks passed: production chat disabled by default, explicit enable required.');
 
 const missing = setup({ GEMINI_API_KEY: 'not-a-fallback' });
 await assert.rejects(missing.chat('Olá'), /CODE/);

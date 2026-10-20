@@ -16,11 +16,10 @@ export default function ContactSection() {
         <div>
           <p className="eyebrow text-slate-500">Contato</p>
           <h2 className={`${titleFont.className} mt-3 text-3xl tracking-[-.035em] text-slate-950 sm:text-4xl`}>Vamos conversar.</h2>
-          <p className="mt-5 max-w-lg leading-7 text-slate-600">Para conversar sobre oportunidades em desenvolvimento front-end e Shopify, entre em contato por e-mail ou pelo LinkedIn.</p>
-          <button type="button" disabled aria-describedby="resume-status" className="mt-7 inline-flex cursor-not-allowed items-center gap-2 rounded-lg border border-slate-200 bg-slate-50 px-4 py-2.5 text-sm font-medium text-slate-500">
-            <FiDownload aria-hidden="true" /> Currículo em PDF
-          </button>
-          <p id="resume-status" className="mt-2 text-xs text-slate-500">Currículo em atualização.</p>
+          <p className="mt-5 max-w-lg leading-7 text-slate-600">Para conversar sobre oportunidades em desenvolvimento front-end, Shopify e e-commerce, entre em contato por e-mail ou pelo LinkedIn.</p>
+          <a href="/curriculo-tone-revetler.pdf" download="Curriculo-Tone-Revetler.pdf" className="mt-7 inline-flex items-center gap-2 rounded-lg border border-blue-700 bg-blue-700 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-blue-800 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-700">
+            <FiDownload aria-hidden="true" /> Baixar currículo (PDF)
+          </a>
         </div>
         <div className="divide-y divide-slate-200">
           {links.map(({ label, value, href, icon: Icon }) => (
