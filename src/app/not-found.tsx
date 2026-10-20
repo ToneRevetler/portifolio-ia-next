@@ -19,7 +19,7 @@ export default function NotFound() {
             Página não encontrada
           </FuzzyText>
         </p>
-        <Link href="/" className="mt-6 inline-block text-blue-600 hover:underline border-blue-600 p-4 border-1 rounded-4xl">
+        <Link href="/" className="action-control action-button mt-6 inline-block text-blue-700 border-blue-600 p-4 border-1 rounded-4xl">
           Voltar para a página inicial
         </Link>
       </div>

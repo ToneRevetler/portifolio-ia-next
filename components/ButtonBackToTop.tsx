@@ -28,7 +28,7 @@ export default function ButtonBackToTop() {
         type="button"
         aria-label="Voltar ao início da página"
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-        className="cursor-pointer bg-blue-500 text-white rounded-full p-3 shadow-lg hover:bg-blue-600 transition duration-300"
+        className="action-control action-button action-primary bg-blue-700 text-white rounded-full p-3 shadow-md"
       >
         ↑
       </button>

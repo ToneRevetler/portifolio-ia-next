@@ -61,7 +61,7 @@ export function InputEmailCopyFooter() {
   return <>
     <div className="flex items-center flex-col md:pb-8">
       <p className="pb-2 font-semibold text-gray-600">Entre em contato por e-mail</p>
-      <a className="font-bold text-gray-900 text-xl hover:underline" href={`mailto:${email}`}>{email}</a>
+      <a className="action-control action-link font-bold text-gray-900 text-xl underline decoration-white/30 underline-offset-4" href={`mailto:${email}`}>{email}</a>
     </div>
   </>
 }

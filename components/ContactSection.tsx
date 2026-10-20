@@ -17,16 +17,16 @@ export default function ContactSection() {
           <p className="eyebrow text-slate-500">Contato</p>
           <h2 className={`${titleFont.className} mt-3 text-3xl tracking-[-.035em] text-slate-950 sm:text-4xl`}>Vamos conversar.</h2>
           <p className="mt-5 max-w-lg leading-7 text-slate-600">Para conversar sobre oportunidades em desenvolvimento front-end, Shopify e e-commerce, entre em contato por e-mail ou pelo LinkedIn.</p>
-          <a href="/curriculo-tone-revetler.pdf" download="Curriculo-Tone-Revetler.pdf" className="mt-7 inline-flex items-center gap-2 rounded-lg border border-blue-700 bg-blue-700 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-blue-800 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-700">
+          <a href="/curriculo-tone-revetler.pdf" download="Curriculo-Tone-Revetler.pdf" className="action-control action-button action-primary mt-7 inline-flex items-center gap-2 rounded-lg border border-blue-700 bg-blue-700 px-4 py-2.5 text-sm font-semibold text-white">
             <FiDownload aria-hidden="true" /> Baixar currículo (PDF)
           </a>
         </div>
         <div className="divide-y divide-slate-200">
           {links.map(({ label, value, href, icon: Icon }) => (
-            <a key={label} href={href} target={href.startsWith("http") ? "_blank" : undefined} rel={href.startsWith("http") ? "noopener noreferrer" : undefined} className="group flex items-center gap-4 px-2 py-5 transition hover:bg-slate-50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-700">
+            <a key={label} href={href} target={href.startsWith("http") ? "_blank" : undefined} rel={href.startsWith("http") ? "noopener noreferrer" : undefined} className="action-control action-row flex items-center gap-4 rounded-md px-2 py-5">
               <Icon className="shrink-0 text-lg text-slate-500" aria-hidden="true" />
-              <span className="min-w-0 flex-1"><span className="block text-xs font-medium text-slate-500">{label}</span><span className="mt-1 block break-words text-sm font-semibold text-slate-900 transition group-hover:text-blue-700 sm:text-base">{value}</span></span>
-              <FiArrowUpRight className="shrink-0 text-slate-400 transition group-hover:text-blue-700" aria-hidden="true" />
+              <span className="min-w-0 flex-1"><span className="block text-xs font-medium text-slate-500">{label}</span><span className="mt-1 block break-words text-sm font-semibold text-slate-900 sm:text-base">{value}</span></span>
+              <FiArrowUpRight className="action-arrow shrink-0 text-slate-400" aria-hidden="true" />
             </a>
           ))}
         </div>

@@ -70,7 +70,7 @@ export default function ProjectGrid({ projects, singleColumn = false }: { projec
           </dl>
           <p className="mt-4 text-xs leading-6 text-slate-500"><span className="sr-only">Tecnologias: </span>{project.technologies.join(' · ')}</p>
           <details className="group mt-5 border-y border-slate-200">
-            <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-4 text-sm font-semibold text-slate-900 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-700 [&::-webkit-details-marker]:hidden">
+            <summary className="action-control action-row flex cursor-pointer list-none items-center justify-between gap-4 py-4 text-sm font-semibold text-slate-900 [&::-webkit-details-marker]:hidden">
               <span>Detalhes da minha participação<span className="sr-only"> em {project.title}</span></span>
               <FiPlus aria-hidden="true" className="shrink-0 text-slate-500 transition group-open:rotate-45 motion-reduce:transition-none" />
             </summary>
@@ -82,7 +82,7 @@ export default function ProjectGrid({ projects, singleColumn = false }: { projec
             </dl>
           </details>
           {project.link && <div className="mt-4">
-            <a href={project.link} target="_blank" rel="noopener noreferrer" aria-label={`Visitar a loja ${project.title} (abre em nova aba)`} className="inline-flex min-h-11 items-center gap-2 text-sm text-slate-600 underline decoration-slate-300 underline-offset-4 hover:text-blue-700 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-700">Visitar loja atual <FiArrowUpRight aria-hidden="true" /></a>
+            <a href={project.link} target="_blank" rel="noopener noreferrer" aria-label={`Visitar a loja ${project.title} (abre em nova aba)`} className="action-control action-link inline-flex min-h-11 items-center gap-2 text-sm text-slate-600 underline decoration-slate-300 underline-offset-4">Visitar loja atual <FiArrowUpRight className="action-arrow" aria-hidden="true" /></a>
             <p className="text-xs leading-5 text-slate-500">A loja pode ter recebido alterações após minha participação.</p>
           </div>}
         </article>

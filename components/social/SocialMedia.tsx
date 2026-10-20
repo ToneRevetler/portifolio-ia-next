@@ -9,14 +9,14 @@ export default function SocialMedia() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="LinkedIn de Tone Revetler"
-        className="grid h-10 w-10 place-items-center rounded-full border border-slate-300 bg-white transition hover:border-blue-600 hover:text-blue-700">
+        className="action-control action-button grid h-10 w-10 place-items-center rounded-full border border-slate-300 bg-white">
         <FaLinkedin aria-hidden="true" />
       </a>
       <a href="https://github.com/ToneRevetler"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="GitHub de Tone Revetler"
-        className="grid h-10 w-10 place-items-center rounded-full border border-slate-300 bg-white transition hover:border-blue-600 hover:text-blue-700"
+        className="action-control action-button grid h-10 w-10 place-items-center rounded-full border border-slate-300 bg-white"
         >
         <FaGithub aria-hidden="true" />
       </a>

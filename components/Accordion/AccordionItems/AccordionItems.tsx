@@ -26,7 +26,7 @@ const AccordionItem = ({ title, content, subtitle, img, date, defaultOpen = fals
         type="button"
         aria-expanded={isOpen}
         aria-controls={panelId}
-        className="group flex w-full cursor-pointer items-center gap-3 px-4 py-5 text-left transition-colors hover:bg-slate-50 focus-visible:relative focus-visible:z-10 focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-blue-700 sm:gap-4 sm:px-6 sm:py-6"
+        className="action-control action-row group flex w-full cursor-pointer items-center gap-3 px-4 py-5 text-left focus-visible:relative focus-visible:z-10 sm:gap-4 sm:px-6 sm:py-6"
         onClick={() => setIsOpen((open) => !open)}
       >
         {img ? <Image className="h-11 w-11 shrink-0 rounded-lg border border-slate-200 object-cover sm:h-12 sm:w-12" src={img} height={48} width={48} alt="" /> : <span aria-hidden="true" className="grid h-11 w-11 shrink-0 place-items-center rounded-lg border border-slate-200 bg-white text-sm font-bold text-blue-700 sm:h-12 sm:w-12">IS</span>}

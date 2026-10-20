@@ -84,7 +84,7 @@ export default function ChatForm() {
                   key={suggestion}
                   type="button"
                   onClick={() => setInputValue(suggestion)}
-                  className="rounded-md border border-slate-200 bg-white px-3 py-2 text-left text-xs font-semibold text-slate-700 transition hover:border-blue-300 hover:text-blue-700"
+                  className="action-control action-button rounded-md border border-slate-200 bg-white px-3 py-2 text-left text-xs font-semibold text-slate-700"
                 >
                   {suggestion}
                 </button>
@@ -147,7 +147,7 @@ export default function ChatForm() {
         />
 
         <button
-          className="grid h-11 w-11 shrink-0 cursor-pointer place-items-center rounded-xl bg-blue-700 text-white transition hover:bg-blue-800 disabled:cursor-not-allowed disabled:opacity-50"
+          className="action-control action-button action-primary grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-blue-700 text-white disabled:opacity-50"
           type="submit"
           disabled={busy}
           aria-label="Enviar pergunta"

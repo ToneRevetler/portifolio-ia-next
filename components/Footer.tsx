@@ -28,7 +28,7 @@ export default function Footer() {
         </div>
         <div className="flex justify-center border-t border-white/10 p-5 text-sm text-slate-500" >
           <p className="text-center">
-            © {currentYear} <a className="underline decoration-white/20 underline-offset-4 hover:text-white" href="https://github.com/ToneRevetler">Tone Revetler.</a> Todos os direitos reservados.
+            © {currentYear} <a className="action-control action-link underline decoration-white/20 underline-offset-4 hover:text-white" href="https://github.com/ToneRevetler">Tone Revetler.</a> Todos os direitos reservados.
           </p>
         </div>
       </div>

@@ -63,11 +63,11 @@ export default function InitialContent() {
       </p>
 
       <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-        <Link href="/#project" className="inline-flex items-center justify-center gap-2 rounded-lg bg-blue-700 px-6 py-3.5 text-sm font-bold text-white transition hover:bg-blue-800">
+        <Link href="/#project" className="action-control action-button action-primary inline-flex items-center justify-center gap-2 rounded-lg bg-blue-700 px-6 py-3.5 text-sm font-bold text-white">
           Conhecer os projetos
           <FiArrowDownRight aria-hidden="true" />
         </Link>
-        <a href="/curriculo-tone-revetler.pdf" download="Curriculo-Tone-Revetler.pdf" className="inline-flex items-center justify-center rounded-lg border border-slate-300 bg-white px-6 py-3.5 text-sm font-bold text-slate-900 transition hover:border-slate-900 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-700">
+        <a href="/curriculo-tone-revetler.pdf" download="Curriculo-Tone-Revetler.pdf" className="action-control action-button inline-flex items-center justify-center rounded-lg border border-slate-300 bg-white px-6 py-3.5 text-sm font-bold text-slate-900">
           Baixar currículo (PDF)
         </a>
       </div>

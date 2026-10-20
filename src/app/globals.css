@@ -33,6 +33,131 @@ body {
   text-transform: uppercase;
 }
 
+/* Shared feedback: button hierarchy stays intact, including on touch screens. */
+.action-control {
+  transition: color 180ms ease, background-color 180ms ease,
+    border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease,
+    text-decoration-color 180ms ease, text-underline-offset 180ms ease;
+}
+
+.action-control:focus-visible {
+  outline: 2px solid #1d4ed8;
+  outline-offset: 4px;
+}
+
+footer .action-control:focus-visible {
+  outline-color: #93c5fd;
+}
+
+.action-button {
+  --action-hover-bg: #eff6ff;
+  --action-hover-color: #1d4ed8;
+  --action-hover-border: #93b4ec;
+  cursor: pointer;
+}
+
+.action-primary {
+  --action-hover-bg: #1e40af;
+  --action-hover-color: #ffffff;
+  --action-hover-border: #1e40af;
+}
+
+.action-dark {
+  --action-hover-bg: #1e293b;
+  --action-hover-color: #ffffff;
+  --action-hover-border: #334155;
+}
+
+.action-button:disabled,
+.action-button[aria-disabled="true"] {
+  cursor: not-allowed;
+}
+
+.action-button:focus-visible:not(:disabled):not([aria-disabled="true"]) {
+  background-color: var(--action-hover-bg);
+  border-color: var(--action-hover-border);
+  color: var(--action-hover-color);
+  box-shadow: 0 4px 12px #0f172a14;
+}
+
+.action-row:focus-visible {
+  background-color: #eff6ff;
+  outline-offset: -2px;
+}
+
+.action-nav {
+  position: relative;
+}
+
+.action-nav::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 -6px;
+  height: 2px;
+  border-radius: 2px;
+  background: #1d4ed8;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 180ms ease;
+}
+
+.action-nav:focus-visible::after {
+  transform: scaleX(1);
+}
+
+.action-arrow {
+  transition: transform 180ms ease, color 180ms ease;
+}
+
+.action-link:focus-visible {
+  text-decoration-color: currentColor;
+  text-underline-offset: 6px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .action-button:hover:not(:disabled):not([aria-disabled="true"]) {
+    background-color: var(--action-hover-bg);
+    border-color: var(--action-hover-border);
+    color: var(--action-hover-color);
+    box-shadow: 0 5px 14px #0f172a1a;
+    transform: translateY(-2px);
+  }
+
+  .action-nav:hover {
+    color: #1d4ed8;
+  }
+
+  .action-nav:hover::after {
+    transform: scaleX(1);
+  }
+
+  .action-row:hover {
+    background-color: #eff6ff;
+  }
+
+  .action-link:hover {
+    text-decoration-color: currentColor;
+    text-underline-offset: 6px;
+  }
+
+  .action-control:hover .action-arrow {
+    transform: translate(2px, -2px);
+    color: #1d4ed8;
+  }
+}
+
+.action-button:active:not(:disabled):not([aria-disabled="true"]) {
+  transform: translateY(0);
+  box-shadow: 0 1px 3px #0f172a1a;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .action-control,
+  .action-control .action-arrow {
+    transform: none !important;
+  }
+}
+
 .experience-panel {
   display: grid;
   grid-template-rows: 0fr;
