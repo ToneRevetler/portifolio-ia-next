@@ -5,6 +5,7 @@ import Lottie from "lottie-react";
 import animationData from "../../src/assets/lottie/handHello.json";
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { FiArrowDownRight, FiMapPin } from "react-icons/fi";
 import SocialMedia from "../social/SocialMedia";
 
@@ -62,10 +63,10 @@ export default function InitialContent() {
       </p>
 
       <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-        <a href="/#project" className="inline-flex items-center justify-center gap-2 rounded-lg bg-blue-700 px-6 py-3.5 text-sm font-bold text-white transition hover:bg-blue-800">
+        <Link href="/#project" className="inline-flex items-center justify-center gap-2 rounded-lg bg-blue-700 px-6 py-3.5 text-sm font-bold text-white transition hover:bg-blue-800">
           Conhecer os projetos
           <FiArrowDownRight aria-hidden="true" />
-        </a>
+        </Link>
         <a href="/curriculo-tone-revetler.pdf" download="Curriculo-Tone-Revetler.pdf" className="inline-flex items-center justify-center rounded-lg border border-slate-300 bg-white px-6 py-3.5 text-sm font-bold text-slate-900 transition hover:border-slate-900 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-700">
           Baixar currículo (PDF)
         </a>

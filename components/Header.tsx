@@ -50,16 +50,16 @@ export default function Header() {
               } absolute left-0 top-18 z-10 w-full border-b border-slate-200 bg-white px-5 py-6 text-lg font-semibold text-slate-800 shadow-xl md:static md:flex md:w-auto md:items-center md:justify-center md:gap-8 md:border-0 md:bg-transparent md:p-0 md:text-sm md:shadow-none`}
           >
             <li className="py-3 md:py-0">
-              <a href="/#project" className="transition hover:text-blue-700" onClick={() => setIsMenuOpen(false)}>Projetos</a>
+              <Link href="/#project" className="transition hover:text-blue-700" onClick={() => setIsMenuOpen(false)}>Projetos</Link>
             </li>
             <li className="border-t border-slate-200 py-3 md:border-0 md:py-0">
-              <a href="/#experience" className="transition hover:text-blue-700" onClick={() => setIsMenuOpen(false)}>Experiência</a>
+              <Link href="/#experience" className="transition hover:text-blue-700" onClick={() => setIsMenuOpen(false)}>Experiência</Link>
             </li>
             <li className="border-t border-slate-200 py-3 md:border-0 md:py-0">
-              <a href="/#aboutMe" className="transition hover:text-blue-700" onClick={() => setIsMenuOpen(false)}>Sobre</a>
+              <Link href="/#aboutMe" className="transition hover:text-blue-700" onClick={() => setIsMenuOpen(false)}>Sobre</Link>
             </li>
             <li className="border-t border-slate-200 py-3 md:border-0 md:py-0">
-              <a href="/#contact" className="transition hover:text-blue-700" onClick={() => setIsMenuOpen(false)}>Contato</a>
+              <Link href="/#contact" className="transition hover:text-blue-700" onClick={() => setIsMenuOpen(false)}>Contato</Link>
             </li>
           </ul>
           <div className="hidden md:flex md:items-center md:justify-end">
